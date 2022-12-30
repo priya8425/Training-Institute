@@ -151,7 +151,7 @@ https://templatemo.com/tm-569-edu-meeting
   </header>
   <!-- ***** Header Area End ***** -->
 
-  <section class="heading-page header-text" id="top">
+  <section class="free-heading-page header-text" id="top">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
