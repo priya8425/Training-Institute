@@ -138,14 +138,14 @@ https://templatemo.com/tm-569-edu-meeting
         <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-12">
-              <div class="filters">
+              <!-- <div class="filters">
                 <ul>
                   <li data-filter="*"  class="active">All Meetings</li>
                   <li data-filter=".soon">Videos</li>
                   <li data-filter=".imp">Important</li>
                   <li data-filter=".att">Attractive</li>
                 </ul>
-              </div>
+              </div> -->
             </div>
             <div class="col-lg-12">
                 <div class="row grid">
