@@ -282,12 +282,12 @@ https://templatemo.com/tm-569-edu-meeting
                                             <div class="form-outline mb-4">
                                                 <label class="form-label" for="form3Example1q">Course*</label>
                                                 
-                                                <select class="form-control" style="height:34px; width:100%;">
-                                                <option value="1" >select</option>
+                                                <select class="form-control" style="height:34px; width:100%;" name="course_name">
+                                                <option>select</option>
                                                 <?php
                                                 while($row=mysqli_fetch_assoc($result)){
                                                 ?>
-                                                <option value="2" ><?php echo $row['course_name']?></option>
+                                                <option><?php echo $row['course_name']?></option>
                                                 <?php } ?>
                                                 </select>
                                             

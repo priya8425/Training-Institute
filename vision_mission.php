@@ -12,9 +12,9 @@ include('includes/configure.php');
         $state = $_POST['state'];
         $course_name = $_POST['course_name'];
         
-        $query = "INSERT INTO `registration`(`first_name`,`last_name`, `email`, `phone`, `mode_of_training`, `state`, `course_name`,) VALUES ('$first_name','$last_name','$email','$phone','$mode_of_training','$state','$course_name',)";
+        $query = "INSERT INTO `registration`(`first_name`,`last_name`, `email`, `phone`, `mode_of_training`, `state`, `course_name`) VALUES ('$first_name','$last_name','$email','$phone','$mode_of_training','$state','$course_name')";
         if (mysqli_query($conn, $query)){
-          echo "<script> alert ('New record has been added successfully !');window.location='course_details.php'</script>";
+          echo "<script> alert ('New record has been added successfully !');window.location='vision_mission.php'</script>";
        } else {
           echo "<script> alert ('connection failed !');</script>";
        }
@@ -245,12 +245,12 @@ https://templatemo.com/tm-569-edu-meeting
                                             <div class="form-outline mb-4">
                                                 <label class="form-label" for="form3Example1q">Course*</label>
                                                 
-                                                <select class="form-control" style="height:34px; width:100%;">
-                                                <option value="1" >select</option>
+                                                <select class="form-control" style="height:34px; width:100%;" name="course_name">
+                                                <option >select</option>
                                                 <?php
                                                 while($row=mysqli_fetch_assoc($result)){
                                                 ?>
-                                                <option value="2" ><?php echo $row['course_name']?></option>
+                                                <option ><?php echo $row['course_name']?></option>
                                                 <?php } ?>
                                                 </select>
                                             
