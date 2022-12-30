@@ -148,7 +148,7 @@ https://templatemo.com/tm-569-edu-meeting
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h6>Here are our upcoming meetings</h6>
+          <!-- <h6>Here are our upcoming meetings</h6> -->
           <h2>Trainers Profile</h2>
         </div>
       </div>
