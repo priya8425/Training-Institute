@@ -1,5 +1,6 @@
 <?php
 include('includes/configure.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -217,23 +218,23 @@ https://templatemo.com/tm-569-edu-meeting
         
         <div class="col-lg-4">
           <div class="categories">
-          <div class=" main-button-red" style="margin-bottom:70px;">
-            <a href="meetings.html">All Upcoming Meetings</a>
-          </div>
-            <h4>Meeting Catgories</h4>
-            <ul>
-              <li><a href="#">Online</a></li><br>
-              <li><a href="#">Offline</a></li>
-              <li><a href="#">Cras et metus vestibulum</a></li>
-              <li><a href="#">Nam et condimentum</a></li>
-              <li><a href="#">Phasellus nec sapien</a></li>
-              <li><a href="#">Online</a></li><br>
-              <li><a href="#">Offline</a></li>
-              <li><a href="#">Cras et metus vestibulum</a></li>
-              <li><a href="#">Nam et condimentum</a></li>
-              <li><a href="#">Phasellus nec sapien</a></li>
-            </ul>
+               
+              <div class=" main-button-red" style="margin-bottom:70px;">
+                <a href="meetings.html">All Upcoming Meetings</a>
+              </div>
+              <h4>Meeting Catgories</h4>
+              <?php
            
+                $sql=mysqli_query($conn,"Select * from meetings");
+                if(mysqli_num_rows($sql)>0){
+                while($arr=mysqli_fetch_array($sql)){
+                ?>
+              <ul>
+                <li><a href="https://meet.google.com/enn-dazv-mbz" target="_blank"><?php echo $arr['link'];?></a></li><br>
+               
+              </ul>
+              <?php } } ?>
+                
           </div>
         </div>
         
@@ -242,6 +243,7 @@ https://templatemo.com/tm-569-edu-meeting
           <div class="row">
           <?php
             $sql=mysqli_query($conn,"Select * from bg_image");
+            if(mysqli_num_rows($sql)>0){
             while($arr=mysqli_fetch_array($sql)){
             ?>
             <div class="col-lg-6">
@@ -260,7 +262,7 @@ https://templatemo.com/tm-569-edu-meeting
               </div>
             </div>
             
-            <?php } ?>
+            <?php } } ?>
             <div class="col-lg-6">
               <div class="meeting-item">
                 <div class="thumb">
@@ -387,6 +389,7 @@ https://templatemo.com/tm-569-edu-meeting
           <div class="owl-courses-item owl-carousel">
             <?php
             $sql=mysqli_query($conn,"Select * from course");
+            if(mysqli_num_rows($sql)>0){
             while($arr=mysqli_fetch_array($sql)){
             ?>
             <div class="item">
@@ -406,7 +409,7 @@ https://templatemo.com/tm-569-edu-meeting
                 </div>
               </div>
             </div>
-            <?php } ?>
+            <?php } }?>
             <!-- <div class="item">
               <img src="assets/images/course-02.jpg" alt="Course Two">
               <div class="down-content">

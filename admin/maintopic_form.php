@@ -20,8 +20,7 @@ include("_includes/config.php");
           echo "<script> alert ('connection failed !');</script>";
        }
     }
-    ?>
-
+    
 
   ?>
 <!DOCTYPE html>

@@ -4,19 +4,13 @@ include("_includes/config.php");
 // if(!isset($_SESSION['id'])){
 //     header("location:adminlogin.php");
 // } 
-
-
-if(isset($_POST['submitcourse']))
+    if(isset($_POST['submit']))
     {
-        $subtopicsub_name = $_POST['subtopicsub_name'];
-        $maintopicId = $_POST['maintopicId'];
-        $courseId = $_POST['courseId'];
-        $subtopicId = $_POST['subtopicId'];
-        $sql="INSERT INTO `subtopic_sub`(`subtopicsub_name`,`subtopic_id`,`maintopic_id`,`course_id`) VALUES ('$subtopicsub_name',$subtopicId,$maintopicId,$courseId)";
-        if (mysqli_query($conn, $sql)){
-          echo "<script> alert ('New record has been added successfully !');window.location.href='subtopic.php'</script>";
-       }
-        else {
+        $link = $_POST['link'];
+        $query = "INSERT INTO `meetings`(`link`) VALUES ('$link')";
+        if (mysqli_query($conn, $query)){
+          echo "<script> alert ('New record has been added successfully !');window.location='meetings.php'</script>";
+       } else {
           echo "<script> alert ('connection failed !');</script>";
        }
     }
@@ -27,7 +21,7 @@ if(isset($_POST['submitcourse']))
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>Marcks Training | subtopic FORM </title>
+  <title>Marcks Training | About FORM </title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -71,12 +65,12 @@ if(isset($_POST['submitcourse']))
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">    
-          <h1>subtopic Form</h1>
+          <h1>Meetings Form</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">subtopic Form</li>
+              <li class="breadcrumb-item active">Meetings Form</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -86,70 +80,44 @@ if(isset($_POST['submitcourse']))
 
     <!-- Main content -->
     <section class="content">
-    <div class="row">
-            <div class="col-md-12">
-              <div class="card card-primary">
-
-                <!-- /.card-header -->
-                <!-- form start -->
-                <form class="form-sample" method="post" enctype="multipart/form-data">
-                  <div class="card-body">
-                      <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group col">
-                            <label for="exampleInputEmail1">Course Name</label>
-                              <select class="form-control" name="courseId" id="courseId" onchange="getmainTopic();">
-                                <?php
-                                $result=mysqli_query($conn,"select * from course order by course_id desc");
-                                if(mysqli_num_rows($result)>0){
-                                  while($row=mysqli_fetch_array($result)){
-                                    ?>
-                                    <option value="<?=$row['course_id'];?>"><?=$row['course_name'];?></option>
-                                    <?php
-                                  }
-                                }
-                                ?>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group col">
-                                <label for="exampleInputEmail1">Mani Topic</label>
-                                  <select class="form-control" name="maintopicId" id="maintopicId" onchange="getsubTopic();">
-                                    
-                                  </select>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                      <div class="col-md-6">
-                            <div class="form-group col">
-                                <label for="exampleInputEmail1">subtopic Topic</label>
-                                  <select class="form-control" name="subtopicId" id="subtopicId">
-                                    
-                                  </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group col">
-                              <label for="exampleInputEmail1">Name</label>
-                              <input type="text" class="form-control" value="" name="subtopicsub_name">
-                            </div>
-                          </div>
-                      </div>
-                    
-
-                    <!-- /.card-body -->
-
-                    <div class="card-footer">
-                      <button type="submit" name="submitcourse" class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-              </div>
-              
+        <div class="container-fluid">
+          <!-- SELECT2 EXAMPLE -->
+          <div class="card card-default">
+            <div class="card-header">
+              <h3 class="card-title">Meetings Form</h3>
             </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <form method="post" enctype="multipart/form-data">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Link</label>
+                      <input type="text" class="form-control" name="link">
+                    </div>
+
+                  </div>
+                  
+                </div>
+                  <!-- /.col -->
+                
+                <!-- /.row -->
+
+
+
+                <!-- /.form-group -->
+                <button type="submit" name="submit" class="btn btn-primary" style="float: right;">Submit</button>
+            </div>
+            <!-- /.col -->
           </div>
-    </section>
+          <!-- /.row -->
+          </form>
+        </div>
+        <!-- /.card-body -->
+
+  <!-- /.container-fluid -->
+  </section>
+
   
   <!-- /.content -->
   </div>

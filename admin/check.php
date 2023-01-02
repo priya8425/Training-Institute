@@ -727,7 +727,7 @@ Image   <span class="text-danger">*</span>
 ?>
 <?php
 if(isset($_POST['dnkk9'])){
-  $query=mysqli_query($conn,"select * from maintopic where maintopic_id='".$_POST['dnkk9']."'");
+  $query=mysqli_query($conn,"select * from maintopic where course_id='".$_POST['dnkk9']."'");
   $row=mysqli_fetch_array($query);
   echo ' 
   <div class="row">
@@ -737,9 +737,9 @@ if(isset($_POST['dnkk9'])){
       Course Name  <span class="text-danger">*</span>
       </label>
       <div class="input-group">
-      <input type="hidden" name="maintopic_id" value="'.$row['maintopic_id'].'">
+      <input type="hidden" name="course_id" value="'.$row['course_id'].'">
          
-        <input class="form-control" placeholder="Enter course name" name="course_name" type="text" value="'.$row['course_name'].'" data-dtp="dtp_dl6pL">
+      
         
       </div>
     </div>
@@ -914,6 +914,7 @@ Image   <span class="text-danger">*</span>
  
 </div>
 ';
+
 }
 
 
@@ -976,3 +977,4 @@ Image   <span class="text-danger">*</span>
 
 
 ?>
+
