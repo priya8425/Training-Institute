@@ -174,8 +174,9 @@ https://templatemo.com/tm-569-edu-meeting
                                     This is a page description
                                 <hr>
                                 
+                                
                                 <br>
-                                <h5 style="color:white; font-size:15px;">To enrich the knowledge & skill sets of young software engineers by providing value added training in the areas of Software Development & Testing.
+                                <h5 style="color:white; font-size:15px;">To enrich the knowledge & skill sets of young software       engineers by providing value added training in the areas of Software Development & Testing.
 
                                   To serve the industries by providing trained human resources in the above areas.
 

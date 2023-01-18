@@ -1,6 +1,5 @@
 <?php
 include('includes/configure.php');
- $course_id=$_GET['id'];
  
     if(isset($_POST['submit']))
     {

@@ -1,9 +1,9 @@
 <?php
 include("_includes/config.php");
-session_start();
-if(!isset($_SESSION['id'])){
-    header("location:adminlogin.php");
-} 
+// session_start();
+// if(!isset($_SESSION['id'])){
+//     header("location:adminlogin.php");
+// } 
 
 if(isset($_GET['delid'])){
   $id=mysqli_real_escape_string($conn,$_GET['delid']);
@@ -130,9 +130,9 @@ if(isset($_GET['delid'])){
                     </thead>
                     <tbody>
                     <?php     
-    $sql=mysqli_query($conn,"select * from placement");
-    while($arr=mysqli_fetch_array($sql)){
-    ?>
+                      $sql=mysqli_query($conn,"select * from placement");
+                      while($arr=mysqli_fetch_array($sql)){
+                    ?>
                       <tr>
                         <td>
                           <?php echo $arr['date'];?>
@@ -157,12 +157,10 @@ if(isset($_GET['delid'])){
                         <a href="placement.php?delid=<?php echo $arr['id']; ?>"><button type="button" class="btn btn-danger btn-rounded btn-icon btn-sm"  style="color: aliceblue"> <i class="fas fa-trash"></i> </button></a>
                        
                         <!-- <a href="manual-attendance.php?delid=<?php echo $arr['id']; ?>"><button type="button" class="btn btn-primary btn-rounded btn-icon"  style="color: aliceblue"> <i class="fas fa-eye"></i> </button></a> -->
-
-                                                         
-                                               </td> 
+                        </td> 
                        
                        
-    </tr>     
+                      </tr>     
     
                                                  
     <?php

@@ -714,8 +714,7 @@ Image   <span class="text-danger">*</span>
   paragraph <span class="text-danger">*</span>
   </label>
   <div class="input-group">
-   
-  <input class="form-control" placeholder="" name="paragraph" type="text" value="'.$row['paragraph'].'" data-dtp="dtp_dl6pL">    
+  <textarea class="form-control" placeholder="" name="paragraph">'.$row['paragraph'].'</textarea>    
   </div>
 </div>
 </div>

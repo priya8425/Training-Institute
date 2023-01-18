@@ -209,9 +209,9 @@ https://templatemo.com/tm-569-edu-meeting
                                     <?php echo $arr['time'];?>
                                     </td>
                                     <td style="color:white;">
-                                        <a href="#">
+                                    <a href="https://meet.google.com/enn-dazv-mbz" target="_blank">
                                         <div style="height:100%;width:100%">
-                                        Get Link
+                                          <?php echo $arr['link'];?>
                                         </div>
                                         </a>
                                     </td>

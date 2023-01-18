@@ -149,40 +149,40 @@ https://templatemo.com/tm-569-edu-meeting
             </div>
             <div class="col-lg-12">
                 <div class="row grid">
-                    <div class="col-lg-4 templatemo-item-col all soon att">
+                    <div class="col-lg-4 templatemo-item-col all soon att" style="height:500px;">
                         <div class="meeting-item">
                             
                             <div class="down-content">
                             <a href="meeting-details.html"><h4>core java</h4></a>
-                                <p><li>What is Java?</li>
-                                <li>Define Object in Java?</li>
-                                <li>What is typecasting?</li>
-                                <li>How many types of operators are available in Java?</li>
-                                <li>What are the bitwise operators in Java?</li>
-                                <li>List out the control statements in Java?</li>
-                                <li>Describe in brief OOPs concepts?</li>
-                                <li>What is a static variable?</li>
-                                <li>What is the usage of this keyword in Java?</li>
-                                <li>Can we have virtual functions in Java?</li></p>
+                                <ol><li>1. What is Java?</li>
+                                <li>2. Define Object in Java?</li>
+                                <li>3. What is typecasting?</li>
+                                <li>4. How many types of operators are available in Java?</li>
+                                <li>5. What are the bitwise operators in Java?</li>
+                                <li>6. List out the control statements in Java?</li>
+                                <li>7. Describe in brief OOPs concepts?</li>
+                                <li>9. What is the usage of this keyword in Java?</li>
+                                <li>10. Can we have virtual functions in Java?</li>
+                              <li>11. How will you implement cart?</li></ol>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="col-lg-4 templatemo-item-col all imp ">
+                    <div class="col-lg-4 templatemo-item-col all imp " style="height:500px;">
                         <div class="meeting-item">
                             
                             <div class="down-content">
-                            <a href="meeting-details.html"><h4>core java</h4></a>
-                                <p><li>What is Java?</li>
-                                <li>Define Object in Java?</li>
-                                <li>What is typecasting?</li>
-                                <li>How many types of operators are available in Java?</li>
-                                <li>What are the bitwise operators in Java?</li>
-                                <li>List out the control statements in Java?</li>
-                                <li>Describe in brief OOPs concepts?</li>
-                                <li>What is a static variable?</li>
-                                <li>What is the usage of this keyword in Java?</li>
-                                <li>Can we have virtual functions in Java?</li></p>
+                            <a href="meeting-details.html"><h4>.Net Full Stack</h4></a>
+                                <p><li>1. What is .NET Core? </li>
+                                <li>2. What is the difference between String and string in C#?</li>
+                                <li>3. What is .NET Standard?</li>
+                                <li>4. What is the .NET Framework?</li>
+                                <li>5. What is Boxing and Unboxing?</li>
+                                <li>6. What you understand by Value types and Reference types in .NET?</li>
+                                <li>7. What is the difference between .NET Core and Mono?</li>
+                                <li>8. What are some characteristics of .NET Core?  </li>
+                                <li>9. Name some CLR services?</li>
+                                <li>10. What is an unmanaged resource in .NET?</li></p>
                             </div>
                         </div>
                     </div>
@@ -190,35 +190,39 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="meeting-item">
                             
                             <div class="down-content">
-                            <a href="meeting-details.html"><h4>core java</h4></a>
-                                <p><li>What is Java?</li>
-                                <li>Define Object in Java?</li>
-                                <li>What is typecasting?</li>
-                                <li>How many types of operators are available in Java?</li>
-                                <li>What are the bitwise operators in Java?</li>
-                                <li>List out the control statements in Java?</li>
-                                <li>Describe in brief OOPs concepts?</li>
-                                <li>What is a static variable?</li>
-                                <li>What is the usage of this keyword in Java?</li>
-                                <li>Can we have virtual functions in Java?</li></p>
+                            <a href="meeting-details.html"><h4>Python Full stack</h4></a>
+                                <p><li>1. What is python?</li>
+                                <li>2. What is CORS?</li>
+                                <li>3. What is Multi-threading?</li>
+                                <li>4. What are the key features of Python?</li>
+                                <li>5. What are the benefits of using Python?</li>
+                                <li>6. What is a Python web framework?</li>
+                                <li>7. What is the difference between Django, Flask, and Pyramid?</li>
+                                <li>8. What are the most popular Python web frameworks?</li>
+                                <li>9. What are Pickling and Unpickling?</li>
+                                <li>10. How is Memory managed in Python?</li>
+                                <li>11. What Does the // Operator Do?</li>
+                                <li>12. What Is the Purpose of the Pass Statement?</li>
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 templatemo-item-col all soon">
+                    
+                    <div class="col-lg-4 templatemo-item-col all imp att">
                         <div class="meeting-item">
                             
                             <div class="down-content">
-                            <a href="meeting-details.html"><h4>core java</h4></a>
-                                <p><li>What is Java?</li>
-                                <li>Define Object in Java?</li>
-                                <li>What is typecasting?</li>
-                                <li>How many types of operators are available in Java?</li>
-                                <li>What are the bitwise operators in Java?</li>
-                                <li>List out the control statements in Java?</li>
-                                <li>Describe in brief OOPs concepts?</li>
-                                <li>What is a static variable?</li>
-                                <li>What is the usage of this keyword in Java?</li>
-                                <li>Can we have virtual functions in Java?</li></p>
+                            <a href="meeting-details.html"><h4>Tableau</h4></a>
+                            <p><li>1. What Are the Data Types Supported in Tableau?</li>
+                                <li>2. How Will You Understand Dimensions and Measures?</li>
+                                <li>3. What is Meant by ‘discrete’ and ‘continuous’ in Tableau?</li>
+                                <li>4. What Are the Filters? Name the Different Filters in Tableau.</li>
+                                <li>5. What Are the Different Joins in Tableau?</li>
+                                <li>6. What is the Difference Between Joining and Blending?</li>
+                                <li>7. What is a Parameter in Tableau?</li>
+                                <li>8. What is the Difference Between .twbx And .twb?</li>
+                                <li>9. What Do You Understand the Blended Axis?</li>
+                                <li>10. What Will the Following Function Return?</li></p>
                             </div>
                         </div>
                     </div>
@@ -226,17 +230,20 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="meeting-item">
                             
                             <div class="down-content">
-                            <a href="meeting-details.html"><h4>core java</h4></a>
-                                <p><li>What is Java?</li>
-                                <li>Define Object in Java?</li>
-                                <li>What is typecasting?</li>
-                                <li>How many types of operators are available in Java?</li>
-                                <li>What are the bitwise operators in Java?</li>
-                                <li>List out the control statements in Java?</li>
-                                <li>Describe in brief OOPs concepts?</li>
-                                <li>What is a static variable?</li>
-                                <li>What is the usage of this keyword in Java?</li>
-                                <li>Can we have virtual functions in Java?</li></p>
+                            <a href="meeting-details.html"><h4>Magento</h4></a>
+                                <p><li>1. Define Magento.</li>
+                                <li>2. What was the initial release date of Magento?</li>
+                                <li>3. Describe various versions of Magento?</li>
+                                <li>4. Explain the architecture of Magento?</li>
+                                <li>5. What is the technology used by Magento?</li>
+                                <li>6. Explain some features of Magento?</li>
+                                <li>7. What are the limitations of Magento?</li>
+                                <li>8. How can you improve performance of Magento?</li>
+                                <li>9. What is EAV in Magento?</li>
+                                <li>10. Explain the difference between EAV and flat model?</li>
+                                <li>8. How can you improve performance of Magento?</li>
+                                <li>9. What is EAV in Magento?</li>
+                                <li>10. Explain the difference between EAV and flat model?</li></p>
                             </div>
                         </div>
                     </div>
@@ -244,17 +251,19 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="meeting-item">
                             
                             <div class="down-content">
-                            <a href="meeting-details.html"><h4>core java</h4></a>
-                                <p><li>What is Java?</li>
-                                <li>Define Object in Java?</li>
-                                <li>What is typecasting?</li>
-                                <li>How many types of operators are available in Java?</li>
-                                <li>What are the bitwise operators in Java?</li>
-                                <li>List out the control statements in Java?</li>
-                                <li>Describe in brief OOPs concepts?</li>
-                                <li>What is a static variable?</li>
-                                <li>What is the usage of this keyword in Java?</li>
-                                <li>Can we have virtual functions in Java?</li></p>
+                            <a href="meeting-details.html"><h4>Data Science</h4></a>
+                                <p><li>1. What is Data Science?</li>
+                                <li>2. How is logistic regression done?</li>
+                                <li>3. Explain the steps in making a decision tree.</li>
+                                <li>4. How do you build a random forest model?</li>
+                                <li>5. How can you avoid overfitting your model?</li>
+                                <li>6. What are dimensionality reduction and its benefits?</li>
+                                <li>7. How should you maintain a deployed model?</li>
+                                <li>9. How can you select k for k-means? </li>
+                                <li>10. How can outlier values be treated?</li>
+                                <li>11. How can time-series data be declared as stationery?</li>
+                                <li>12. How can you calculate accuracy using a confusion matrix?</li>
+                                <li>14.  What is the ROC curve?</li></p>
                             </div>
                         </div>
                     </div>

@@ -190,7 +190,7 @@ https://templatemo.com/tm-569-edu-meeting
                             <p style="color:white;">The duration of the entire project including training program is for a period of 3 months, starting from November to May according to convenience.</p>
 
                             <br>
-                            <h3>A certificate of training and project completion will be given by Naresh IT on successful competition of the course criteria.</h3>
+                            <h4>A certificate of training and project completion will be given by MTIS on successful competition of the course criteria.</h4>
                         <br>
                         <p style="color:white;"><b> Technologies being a leading Software Training Institute, the Internship program fee is very reasonable and need to be paid by each student towards the cost of Software Training and Career Guidance.</b></p>
                         

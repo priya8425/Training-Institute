@@ -1,9 +1,9 @@
 <?php
 include("_includes/config.php");
-session_start();
-if(!isset($_SESSION['id'])){
-    header("location:adminlogin.php");
-} 
+// session_start();
+// if(!isset($_SESSION['id'])){
+//     header("location:adminlogin.php");
+// } 
 
 if(isset($_GET['delid'])){
   $id=mysqli_real_escape_string($conn,$_GET['delid']);
@@ -122,6 +122,7 @@ if(isset($_GET['delid'])){
                         <th>faculty Name</th>
                         <th>Date</th>
                         <th>Time</th>
+                        <th>Link</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -142,6 +143,9 @@ if(isset($_GET['delid'])){
                         </td>
                         <td>
                           <?php echo $arr['time'];?>
+                        </td>
+                        <td>
+                          <?php echo $arr['link'];?>
                         </td>
                         <td>
                        

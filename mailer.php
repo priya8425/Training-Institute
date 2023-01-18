@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
             $mail->Host       = 'mail.marcksitservices.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'no-reply@marcksitservices.com';                     //SMTP username
-            $mail->Password   = 'D[OhrbjH6JnM';                               //SMTP password
+            $mail->Password   = 'D88EqdjCJYeR';                               //SMTP password
             $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         

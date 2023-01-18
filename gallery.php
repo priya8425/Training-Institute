@@ -342,7 +342,7 @@ https://templatemo.com/tm-569-edu-meeting
                     <div class="meeting-item">
                         <div class="thumb">
                             <div class="ratio ratio-21x9">
-                                <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
+                                <iframe src="//www.youtube.com/embed/YE7VzlLtp-4"controlsList="nodownload" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
                             </div>
                         </div>
                         <div class="down-content">

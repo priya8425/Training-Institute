@@ -1,5 +1,5 @@
 <?php
-include('includes/configure.php');
+  include('includes/configure.php');
 
  
     if(isset($_POST['submit']))
@@ -45,23 +45,22 @@ include('includes/configure.php');
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
     <style>
-    
-    @media (min-width: 1025px) {
-.h-custom {
-height: 100vh !important;
-}
-}
-  </style>
+      
+      @media (min-width: 1025px) {
+        .h-custom {
+        height: 100vh !important;
+      }
+      }
+    </style>
   
-<!--
+    <!--
 
-TemplateMo 569 Edu Meeting
+    TemplateMo 569 Edu Meeting
 
-https://templatemo.com/tm-569-edu-meeting
+    https://templatemo.com/tm-569-edu-meeting
 
--->
+    -->
   </head>
-
 <body>
 
    
@@ -88,7 +87,6 @@ https://templatemo.com/tm-569-edu-meeting
       </div>
     </div>
   </div>
-
   <!-- ***** Header Area Start ***** -->
  
   <header class="header-area header-sticky">
@@ -165,7 +163,6 @@ https://templatemo.com/tm-569-edu-meeting
   </section>
         <section class="contact-us" id="contact">
             <div class="container">
-               
                 <div class="row">
                     <div class="col-lg-8 ">
                     
@@ -289,15 +286,12 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
 
                         </div>
-
-                
                     </div>
                 </div>
             </div>
             <?php 
-            include("includes/footer.php");
+              include("includes/footer.php");
             ?>
-         
         </section>
 
   <!-- Scripts -->
@@ -360,18 +354,14 @@ https://templatemo.com/tm-569-edu-meeting
         });
     </script>
     <script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+    </script>
 </body>
-
-
-  </body>
-
 </html>

@@ -10,8 +10,9 @@ include("_includes/config.php");
         $faculty_name = $_POST['faculty_name'];
         $date = $_POST['date'];
         $time = $_POST['time'];
-        $query = "INSERT INTO `course_schedule`(`course_name`,`faculty_name`,`date`,`time`) VALUES  
-         ('$course_name','$faculty_name','$date','$time')";
+        $link = $_POST['link'];
+        $query = "INSERT INTO `course_schedule`(`course_name`,`faculty_name`,`date`,`time`,`link`) VALUES  
+         ('$course_name','$faculty_name','$date','$time','$link')";
         if (mysqli_query($conn, $query)){
           echo "<script> alert ('New record has been added successfully !');window.location='course_schedule.php'</script>";
        } else {
@@ -123,6 +124,15 @@ include("_includes/config.php");
                         <div class="form-group">
                         <label>Time</label>
                         <input type="time" class="form-control" name="time" placeholder="">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                        <label>Link</label>
+                        <input type="date" class="form-control" name="link" placeholder="">
                         </div>
 
                     </div>
