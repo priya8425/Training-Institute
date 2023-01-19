@@ -20,8 +20,6 @@ include("_includes/config.php");
           echo "<script> alert ('connection failed !');</script>";
        }
     }
-    
-
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,13 +57,11 @@ include("_includes/config.php");
   <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
   </div>
-
   <!-- Navbar -->
   <?php
   include("_includes/header.php");
   include("_includes/sidebar.php");
    ?>
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -134,22 +130,15 @@ include("_includes/config.php");
             </div>
           </div>
     </section>
-
-  
   <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
   <?php
-
-include("_includes/footer.php");
- ?>
- 
-
+    include("_includes/footer.php");
+  ?>
   <!-- Control Sidebar -->  
 </div>
 <!-- ./wrapper -->
-
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->

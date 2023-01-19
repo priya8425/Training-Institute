@@ -1,9 +1,9 @@
 <?php
 include("_includes/config.php");
-session_start();
-if(!isset($_SESSION['id'])){
-    header("location:adminlogin.php");
-}
+// session_start();
+// if(!isset($_SESSION['id'])){
+//     header("location:adminlogin.php");
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">

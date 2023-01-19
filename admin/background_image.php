@@ -1,9 +1,9 @@
 <?php
-include("_includes/config.php");
-session_start();
-if(!isset($_SESSION['id'])){
-    header("location:adminlogin.php");
-} 
+// include("_includes/config.php");
+// session_start();
+// if(!isset($_SESSION['id'])){
+//     header("location:adminlogin.php");
+// } 
 
 if(isset($_GET['delid'])){
   $id=mysqli_real_escape_string($conn,$_GET['delid']);
@@ -19,14 +19,6 @@ if(isset($_GET['delid'])){
   $dnk=$_FILES['image']['tmp_name'];
     $loc="dist/img/".$image;
     move_uploaded_file($dnk,$loc);
-    $maxsize = 5242880; // 5MB
-        $name = $_FILES['file']['name'];
-        $target_dir = "background/";
-        $target_file = $target_dir . $_FILES["file"]["name"];
-        $extensions_arr = array("mp4","avi","3gp","mov","mpeg");
-        move_uploaded_file($_FILES['file']['tmp_name'],$target_file)
-          // Insert record
-      
     $sql="UPDATE `bg_image` SET `image`='$image' `name`='$name' WHERE id='$id'";
     if (mysqli_query($conn, $sql)){
       // header("location:new_project.php");
@@ -191,7 +183,6 @@ if(isset($_GET['delid'])){
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
   <?php
 
 include("_includes/footer.php");

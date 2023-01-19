@@ -224,11 +224,11 @@
                   if(mysqli_num_rows($sql)>0){
                   while($arr=mysqli_fetch_array($sql)){
                 ?>
-              <div class="col-lg-6">
+              <div class="col-lg-6" >
                 <div class="meeting-item">
                   <div class="thumb">
                   
-                    <a href="meeting-details.html"><img src="admin/dist/img/<?php echo $arr['image'];?>" alt="New Lecturer Meeting"></a>
+                    <a href="meeting-details.html"><img src="admin/dist/img/<?php echo $arr['image'];?>" alt="New Lecturer Meeting" style="height:250px;"></a>
                   </div>
                   <div class="down-content">
                     <div class="date">
@@ -241,12 +241,12 @@
               </div>
               
                 <?php } } ?>
-              <div class="col-lg-6">
+              <!-- <div class="col-lg-6">
                 <div class="meeting-item">
                   <div class="thumb">
-                    <!-- <div class="price">
+                     <div class="price">
                       <span>$48.00</span>
-                    </div> -->
+                    </div> 
                     <a href="meeting-details.html"><img src="assets/images/meeting-04.jpg" alt="Student Training"></a>
                   </div>
                   <div class="down-content">
@@ -257,7 +257,7 @@
                     <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         

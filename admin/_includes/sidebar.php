@@ -1,7 +1,5 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
- 
-
   <!-- Sidebar -->
   <div class="sidebar">
     <!-- Sidebar user (optional) -->
@@ -14,18 +12,13 @@
         <a href="index.php" class="d-block">Marcks Training</a>
       </div>
     </div>
-
     <!-- SidebarSearch Form -->
-   
-
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-       
        <li class="nav-item">
           <a href="index.php" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
-           
             <p>
               Home 
             </p>
@@ -83,6 +76,7 @@
           <p>Contact Details</p>
           </a>
         </li>
+
         <li class="nav-item">
           <a href="placement.php" class="nav-link">
             <i class=" nav-icon far fa-solid fa-handshake"></i>
@@ -91,16 +85,17 @@
             </p>
           </a>
           
-        </li>   
-      <li class="nav-item">
-        <a href="about.php" class="nav-link">
-        <i class="nav-icon fab fa-accessible-icon"></i>
-            <p>
-            About
-          </p>
-        </a>
-      </li>
-      <!-- <li class="nav-item">
+        </li>  
+
+        <li class="nav-item">
+          <a href="about.php" class="nav-link">
+          <i class="nav-icon fab fa-accessible-icon"></i>
+              <p>
+              About
+            </p>
+          </a>
+        </li>
+        <!-- <li class="nav-item">
           <a href="index.php" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
            
@@ -109,12 +104,13 @@
             </p>
           </a>
         </li> -->
-      <li class="nav-item">
+        <li class="nav-item">
           <a href="trainning.php" class="nav-link">
           <i class="nav-icon fas fa-solid fa-id-badge"></i>
           <p>Trainnig </p>
           </a>
         </li>
+
         <li class="nav-item">
           <a href="trainers.php" class="nav-link">
             <!-- <i class=" nav-icon far fa-solid fa-handshake"></i> -->
@@ -124,12 +120,13 @@
             </p>
           </a>
         </li>
-        <li class="nav-item">
+
+        <!-- <li class="nav-item">
           <a href="background_image.php" class="nav-link">
           <i class="nav-icon fas fa-solid fa-id-badge"></i>
           <p>Add Index Background</p>
           </a>
-        </li>
+        </li> -->
         
         <li class="nav-item">
           <a href="home_page.php" class="nav-link">
@@ -147,7 +144,7 @@
             </p>
           </a> 
         </li> -->
-       </ul>
+      </ul>
     </nav>
     <!-- /.sidebar-menu -->
   </div>

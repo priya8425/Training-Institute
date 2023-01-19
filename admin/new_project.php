@@ -1,9 +1,9 @@
 <?php
-include("_includes/config.php");
-session_start();
-if(!isset($_SESSION['id'])){
-    header("location:adminlogin.php");
-} 
+// include("_includes/config.php");
+// session_start();
+// if(!isset($_SESSION['id'])){
+//     header("location:adminlogin.php");
+// } 
 if(isset($_GET['delid'])){
   $id=mysqli_real_escape_string($conn,$_GET['delid']);
   $sql=mysqli_query($conn,"delete from property where id='$id'");
