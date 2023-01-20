@@ -7,31 +7,30 @@ include("_includes/config.php");
 
 if(isset($_GET['delid'])){
   $id=mysqli_real_escape_string($conn,$_GET['delid']);
-  $sql=mysqli_query($conn,"delete from course where course_id='$course_id'");
+  $sql=mysqli_query($conn,"delete from gallery where id='$id'");
   if($sql=1){
-      header("location:course.php");
+      header("location:gallery.php");
   }
   }
 
-  if(isset($_POST['courseedit1'])){
-      $course_id=$_POST['course_id'];
-      $course_name = $_POST['course_name'];
-      $course_description = $_POST['course_description'];
-      $image=$_FILES['image']['name'];
-      $dnk=$_FILES['image']['tmp_name'];
+  if(isset($_POST['galleryedit1'])){
+    $id=$_POST['id'];
+    $image=$_FILES['image']['name'];
+    $dnk=$_FILES['image']['tmp_name'];
       $loc="dist/img/".$image;
       move_uploaded_file($dnk,$loc);
-      $price = $_POST['price'];
-      $instructor = $_POST['instructor'];
-      $about_course = $_POST['about_course'];
-      $paragraph = $_POST['paragraph'];
-   
-    $sql="UPDATE `course` SET `course_name`='$course_name',`course_description`='$course_description',`image`='$image',`price`='$price' ,`instructor`='$instructor' ,`about_course`='$about_course',`paragraph`='$paragraph' WHERE course_id='$course_id'";
+      $video = $_FILES['video']['name'];
+        $tmp_name1 = $_FILES['video']['tmp_name1'];
+        $path = "dist/img/".$video;
+        move_uploaded_file($tmp_name1,$path);
+        $name = $_POST['name'];
+        $content = $_POST['content'];
+    $sql="UPDATE `gallery` SET `image`='$image',`video`='$video',`name`='$name',`content`='$content' WHERE id='$id'";
     if (mysqli_query($conn, $sql)){
       // header("location:new_project.php");
       echo "<script>alert('Successfully Updated');</script>";
    } else {
-      echo "<script> alert ('connection failed !');window.location.href='course.php'</script>";
+      echo "<script> alert ('connection failed !');window.location.href='gallery.php'</script>";
    }
   }
   
@@ -83,20 +82,21 @@ if(isset($_GET['delid'])){
   include("_includes/header.php");
   include("_includes/sidebar.php");
    ?>
+
   <!-- Content Wrapper. Contains page content -->
    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+   <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1>Course Detail</h1>
+              <h1>Gllery</h1>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Course Detail</li>
+                <li class="breadcrumb-item active">Gallery</li>
               </ol>
             </div>
           </div>
@@ -108,89 +108,81 @@ if(isset($_GET['delid'])){
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
+
+
               <div class="card">
                 <div class="card-header" style="padding:0px;">
-                  <h3 class="card-title" style="padding-top:25px; margin-left:10px;">Course Detail</h3>
+                  <h3 class="card-title" style="padding-top:25px; margin-left:10px;"> Gallery</h3>
                   <div class="card-tools my-3" style="text-align:end;">
-                    <a class="btn btn-primary" href="course_form.php" data-tt="tooltip" title=""
-                      data-original-title="Click here to Add project" style="margin-right:20px;">Add Course Details</a>
+                    <a class="btn btn-primary" href="gallery_form.php" data-tt="tooltip" title=""
+                      data-original-title="Click here to Add project" style="margin-right:20px;">Add</a>
                   </div>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
                   <table id="example1" class="table table-bordered table-striped">
-                    <thead>
+                  <thead>
                       <tr>
-                        <th>Course Name</th>
-                        <th>Course Description</th>
                         <th>Image</th>
-                        <th>Price</th>
-                        <th>Instructor</th>
-                        <th>About Course</th>
-                        <th>Paragraph Of Course</th>
+                        <th>Video</th>
+                        <th>Name</th>
+                        <th>Content</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
                         <?php     
-                          $sql=mysqli_query($conn,"select * from course");
-                          while($arr=mysqli_fetch_array($sql)){
+                        $sql=mysqli_query($conn,"select * from gallery");
+                        while($arr=mysqli_fetch_array($sql)){
                         ?>
-                      <tr>
-                        <td>
-                          <?php echo $arr['course_name'];?>
-                        </td>
-                        <td>
-                          <?php echo $arr['course_description'];?>
-                        </td>
-                        <td>
-                        <img src="dist/img/<?php echo $arr['image'];?>" style="height:80px; width:70px;"> 
-                        </td>
-                        <td>
-                          <?php echo $arr['price'];?>
-                        </td>
-                        <td>
-                          <?php echo $arr['instructor'];?>
-                        </td>
-                        <td>
-                          <?php echo $arr['about_course'];?>
-                        </td>
-                        <td>
-                          <?php echo $arr['paragraph'];?>
-                        </td>
+                        <tr>
+                            <td>
+                            <img src="dist/img/<?php echo $arr['image'];?>" style="height:80px; width:70px;"> 
+                            </td>
+                            <td>
+                            <img src="dist/img/<?php echo $arr['video'];?>" style="height:80px; width:70px;"> 
+                            </td>
+                            <td>
+                            <?php echo $arr['name'];?>
+                            </td>
+                            <td>
+                            <?php echo $arr['content'];?>
+                            </td>
+                            <td>
+                        <button  type="button" class="btn btn-primary btn-rounded btn-icon galleryedit btn-sm" data-toggle="modal" data-id='<?php echo $arr['id']; ?>'
+                            style="color: aliceblue"> <i class="fas fa-pen"></i> </button>
+                                                                
+                            <a href="gallery.php?delid=<?php echo $arr['id']; ?>"><button type="button" class="btn btn-danger btn-rounded btn-icon btn-sm" style="color: aliceblue"> <i class="fas fa-trash"></i> </button></a>
                         
-                        <td>
-                       
-                       <button  type="button" class="btn btn-primary btn-rounded btn-icon courseedit btn-sm" data-toggle="modal" data-id='<?php echo $arr['course_id']; ?>'
-                        style="color: aliceblue"> <i class="fas fa-pen"></i> </button>
-                                                               
-                        <a href="course.php?delid=<?php echo $arr['course_id']; ?>"><button type="button" class="btn btn-danger btn-rounded btn-icon btn-sm"  style="color: aliceblue"> <i class="fas fa-trash"></i> </button></a> </td>         
-                      </tr>                         
-                          <?php
-                          } 
-                          ?>
+                            <!-- <a href="manual-attendance.php?delid=<?php echo $arr['id']; ?>"><button type="button" class="btn btn-primary btn-rounded btn-icon"  style="color: aliceblue"> <i class="fas fa-eye"></i> </button></a> --> </td> 
+                            </tr>                      
+                        <?php
+                        } 
+                        ?>
                     </tbody>
+
                   </table>
+
                   <div class="modal fade closemaual" id="dnkModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                      <span aria-hidden="true">&times;</span>
-                                                    </button>
-                        </div>
-                        <form method="post" enctype="multipart/form-data">
-                          <div class="modal-body body4">
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn-close btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="submit" class="btn btn-primary" name="courseedit1">Save changes</button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+      </div>
+      <form method="post" enctype="multipart/form-data">
+      <div class="modal-body body4">
+      </div>
+    <div class="modal-footer">
+    <button type="button" class="btn-close btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary" name="galleryedit1">Save changes</button>
+    </div>
+  </form>
+  </div>
+  </div>
+</div>
                 </div>
                 <!-- /.card-body -->
               </div>
@@ -202,12 +194,16 @@ if(isset($_GET['delid'])){
         </div>
         <!-- /.container-fluid -->
       </section>
-      <!-- /.content -->
-    </div>
+    <!-- /.content -->
+  </div>
   <!-- /.content-wrapper -->
+
   <?php
-    include("_includes/footer.php");
-  ?>
+
+include("_includes/footer.php");
+ ?>
+ 
+
   <!-- Control Sidebar -->  
 </div>
 <!-- ./wrapper -->
@@ -254,13 +250,13 @@ if(isset($_GET['delid'])){
   </script>
     <script>
           $(document).ready(function(){
-          $('.courseedit').click(function(){
-            let dnk9 = $(this).data('id');
+          $('.galleryedit').click(function(){
+            let dnk2 = $(this).data('id');
 
             $.ajax({
             url: 'check.php',
             type: 'post',
-            data: {dnk9: dnk9},
+            data: {dnk2: dnk2},
             success: function(response4){ 
               $('.body4').html(response4);
               $('#dnkModal3').modal('show'); 

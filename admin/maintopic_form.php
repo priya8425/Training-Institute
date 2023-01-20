@@ -14,7 +14,7 @@ include("_includes/config.php");
       
         $sql="INSERT INTO `maintopic`(`maintopic_name`,`course_id`) VALUES ('$maintopic_name',$course_id)";
         if (mysqli_query($conn, $sql)){
-          echo "<script> alert ('New record has been added successfully !');window.location.href='maintopic.php'</script>";
+          echo "<script> alert ('New record has been added successfully !');window.location.href='subtopic_form.php'</script>";
        }
         else {
           echo "<script> alert ('connection failed !');</script>";
@@ -113,15 +113,12 @@ include("_includes/config.php");
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col">
-                          <label for="exampleInputEmail1">Name</label>
+                          <label>Name</label>
                           <input type="text" class="form-control" value="" name="maintopic_name">
                         </div>
                       </div>
                     </div>
-                    
-
                     <!-- /.card-body -->
-
                     <div class="card-footer">
                       <button type="submit" name="submitcourse" class="btn btn-primary">Submit</button>
                     </div>
@@ -173,5 +170,17 @@ include("_includes/config.php");
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+<script>
+  function getmainTopic(val){
+    // alert(val);
+    $.ajax({
+      url:"ajaxgetmaintopic.php",
+      type:"post",
+      data:{course_id:val,action:"getmaintopic"},sucess:function(response){
+        alert(response);
+      }
+    })
+  }
+  </script>
 </body>
 </html>

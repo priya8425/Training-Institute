@@ -84,92 +84,81 @@ include("_includes/config.php");
 
     <!-- Main content -->
     <section class="content">
-        <div class="container-fluid">
-          <!-- SELECT2 EXAMPLE -->
-          <div class="card card-default">
-            <div class="card-header">
-              <h3 class="card-title">Placement Form</h3>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-              <form method="post" enctype="multipart/form-data">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Date Of Drive</label>
-                      <input type="date" class="form-control" name="date" placeholder="">
-                    </div>
-
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Company Name</label>
-                      <input type="text" class="form-control" name="company_name" placeholder="Enter company_name">
-                    </div>
-
-                  </div>
+          <div class="container-fluid">
+            <!-- SELECT2 EXAMPLE -->
+            <div class="card card-default">
+                <div class="card-header">
+                  <h3 class="card-title">Placement Form</h3>
                 </div>
-                  <!-- /.col -->
-                  <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Technology</label>
-                      <input type="text" class="form-control" name="tech" placeholder="">
-                    </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <form method="post" enctype="multipart/form-data">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Date Of Drive</label>
+                            <input type="date" class="form-control" name="date" placeholder="">
+                          </div>
 
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Location</label>
-                      <input type="text" class="form-control" name="location" placeholder="Enter location">
-                    </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" class="form-control" name="company_name" placeholder="Enter company_name">
+                          </div>
 
-                  </div>
+                        </div>
+                      </div>
+                        <!-- /.col -->
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Technology</label>
+                            <input type="text" class="form-control" name="tech" placeholder="">
+                          </div>
+
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" class="form-control" name="location" placeholder="Enter location">
+                          </div>
+
+                        </div>
+                      </div>
+                        <!-- /.row -->
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Placed</label>
+                            <input type="text" class="form-control" name="placed" placeholder="">
+                          </div>
+
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.form-group -->
+                        <button type="submit" name="submit" class="btn btn-primary" style="float: right;">Submit</button>
+                        </div>
+                          <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                  </form>
                 </div>
-                <!-- /.row -->
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Placed</label>
-                      <input type="text" class="form-control" name="placed" placeholder="">
-                    </div>
-
-                  </div>
-                  <!-- /.col -->
-                  
-                </div>
-
-
-                <!-- /.form-group -->
-                <button type="submit" name="submit" class="btn btn-primary" style="float: right;">Submit</button>
-            </div>
-            <!-- /.col -->
-          </div>
-          <!-- /.row -->
-          </form>
-        </div>
-        <!-- /.card-body -->
-
-  <!-- /.container-fluid -->
-  </section>
-
-  
-  <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-
+                    <!-- /.card-body -->
+              <!-- /.container-fluid -->
+    </section>
+              <!-- /.content -->
+    </div>
+        <!-- /.content-wrapper -->
   <?php
-
-include("_includes/footer.php");
- ?>
- 
-
+    include("_includes/footer.php");
+  ?>
   <!-- Control Sidebar -->  
 </div>
 <!-- ./wrapper -->
-
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->

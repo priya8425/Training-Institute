@@ -120,7 +120,6 @@ if(!isset($_SESSION['id'])){
           </div>
         </div><!-- /.container-fluid -->
       </section>
-
       <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
@@ -128,7 +127,6 @@ if(!isset($_SESSION['id'])){
           <div class="card card-default">
             <div class="card-header">
               <h3 class="card-title">Project Form</h3>
-
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -143,7 +141,6 @@ if(!isset($_SESSION['id'])){
                         <option value="New project">New Project</option>
                         <option value="resale">Resale</option>
                         <option value="rent">Rent</option>
-
                       </select>
                     </div>
                   </div>
@@ -174,7 +171,6 @@ if(!isset($_SESSION['id'])){
                     </div>
                   </div>
                 </div>
-
                 <div class="row">
                   <div class="col-md-3">
                     <div class="form-group">
@@ -212,7 +208,8 @@ if(!isset($_SESSION['id'])){
                         <option value="28">28</option>
                         <option value="29">29</option>
                         <option value="30">30</option>
-
+                        <option value="31">31</option>
+                        <option value="32">32</option>
                       </select>
                     </div>
                   </div>
@@ -239,12 +236,10 @@ if(!isset($_SESSION['id'])){
                         <option value="2BHK">2BHK</option>
                         <option value="3BHK">3BHK</option>
                         <option value="4BHK">4BHK</option>
-
                       </select>
                     </div>
                   </div>
                 </div>
-
                 <div class="row">
                   <div class="col-md-3">
                     <div class="form-group">
@@ -303,6 +298,19 @@ if(!isset($_SESSION['id'])){
                           
                           <i class="nav-icon fas fa-solid fa-dumbbell"></i>
                           <label class="form-check-label">Gymnasium</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" value="Security" name=amenities[] type="checkbox">
+                          
+                          <i class="fas fa-user-lock"></i>
+                          <label class="form-check-label">Security</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" value="Kids Play Area" name=amenities[] type="checkbox">
+                          <!-- <i class="fa-solid fa-arrow-up-from-water-pump"></i> -->
+                         
+                          <i class="fas fa-skating"></i>
+                          <label class="form-check-label">Kids Play Area</label>
                         </div>
                         <div class="form-check">
                           <input class="form-check-input" value="Security" name=amenities[] type="checkbox">

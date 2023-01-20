@@ -7,12 +7,12 @@ include("_includes/config.php");
 if(isset($_POST['submitcourse']))
 {
     $subtopic_name = $_POST['subtopic_name'];
-    $maintopicId = $_POST['maintopicId'];
+    $maintopicId = $_POST['maintopic_id'];
     $courseId = $_POST['courseId'];
     $sql="INSERT INTO `subtopic`(`subtopic_name`,`maintopic_id`,`course_id`) VALUES ('$subtopic_name','$maintopicId',
     '$courseId')";
     if (mysqli_query($conn, $sql)){
-      echo "<script> alert ('New record has been added successfully !');</script>";
+      echo "<script> alert ('New record has been added successfully !');window.location.href='sub_subtopic_form.php'</script>";
    }
     else {
       echo "<script> alert ('connection failed !');</script>";
@@ -59,7 +59,7 @@ if(isset($_POST['submitcourse']))
   <!-- Navbar -->
   <?php
   include("_includes/header.php");
-  include("_includes/sidebar.php");
+   include("_includes/sidebar.php");
    ?>
 
   <!-- Content Wrapper. Contains page content -->
@@ -113,7 +113,7 @@ if(isset($_POST['submitcourse']))
                         <div class="col-md-6">
                         <div class="form-group col">
                         <label for="exampleInputEmail1">Main Topic</label>
-                          <select class="form-control" name="maintopicId" id="maintopicId" onchange="">
+                          <select class="form-control" name="maintopic_id" id="maintopic_id">
                             
                           </select>
                         </div>
@@ -165,7 +165,7 @@ include("_includes/footer.php");
 <!-- ChartJS -->
 <script src="plugins/chart.js/Chart.min.js"></script>
 <!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
+<!-- <script src="plugins/sparklines/sparkline.js"></script> -->
 <!-- JQVMap -->
 <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
 <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
@@ -183,8 +183,22 @@ include("_includes/footer.php");
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<!-- <script src="dist/js/demo.js"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
+<!-- <script src="dist/js/pages/dashboard.js"></script> -->
+<script>
+  function getmainTopic(val){
+    // alert(val);
+    $.ajax({
+      url:"ajaxgetmaintopic.php",
+      type:"post",
+      data:{course_id:val,action:"getmaintopic"},
+      success:function(response){
+        // alert(response);
+        $("#maintopic_id").html(response)
+      }
+    })
+  }
+  </script>
 </body>
 </html>

@@ -5,13 +5,6 @@ include("_includes/config.php");
 //     header("location:adminlogin.php");
 // } 
 
-// if(isset($_GET['delmaintopic_id'])){
-//   $maintopic_id=mysqli_real_escape_string($conn,$_GET['delmaintopic_id']);
-//   $sql=mysqli_query($conn,"delete from maintopic where maintopic_id='$maintopic_id'");
-//   if($sql=1){
-//       header("location:maintopic.php");
-//   }
-//   }
 
 
   if(isset($_GET['delid'])){
@@ -21,14 +14,13 @@ include("_includes/config.php");
         header("location:maintopic.php");
     }
     }
-
-  if(isset($_POST['maintopicedit1'])){
-    $course_id=$_POST['course_id'];
-    $maintopic_name = $_POST['maintopic_name'];
-     
+    if(isset($_POST['maintopicedit1'])){
+      $course_id=$_POST['course_id'];
+      $maintopic_name = $_POST['maintopic_name'];
+      
       $sql="UPDATE `maintopic` SET `maintopic_name`='$maintopic_name' WHERE course_id='$course_id'";
       if (mysqli_query($conn, $sql)){
-       
+        // header("location:new_project.php");
         echo "<script>alert('Successfully Updated');</script>";
      } else {
         echo "<script> alert ('connection failed !');window.location.href='maintopic.php'</script>";
@@ -107,8 +99,6 @@ include("_includes/config.php");
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
-
-
               <div class="card">
                 <div class="card-header" style="padding:0px;">
                   <h3 class="card-title" style="padding-top:25px; margin-left:10px;"></h3>
@@ -122,10 +112,9 @@ include("_includes/config.php");
                   <table id="example1" class="table table-bordered table-striped">
                   <thead>
                       <tr>
-                                      <th>Sr no</th>     
-                                      <th>course Id</th>
-                                      <th>Name</th>
-                                      <th>Course Nmae</th>
+                                      <th>Sr no</th>  
+                                      <th>Course Name</th>
+                                      <th>Maintopic Name</th>
                                       <th>content</th>
                                       <th>Action</th>
                       </tr>
@@ -139,7 +128,6 @@ include("_includes/config.php");
                             ?>
                                   <tr>
                                   <td><?php echo $count;?></td>
-                                  <td><?php echo $arr['course_id'];?></td>
                                   <td><?php echo $arr['course_name'];?></td>
                                   <td><?php echo $arr['maintopic_name'];?></td>
                                   <td>
@@ -161,7 +149,7 @@ include("_includes/config.php");
                                 ?><ul style="list-style-type:none;"><?php
                                 while($rowsubtopic=mysqli_fetch_array($resSubtopic)){
                                   ?>
-                                  <li style="text-indent:20px; line-height:8px;"><?=$maintopicCount.".".$subtopicCount." ".$rowsubtopic['subtopic_name']?></li>
+                                  <li style="text-indent:20px; line-height:10px;"><?=$maintopicCount.".".$subtopicCount." ".$rowsubtopic['subtopic_name']?></li>
                                   
                                     <?php
                                     $subsubtopicCount=1;
@@ -171,7 +159,7 @@ include("_includes/config.php");
                                       ?><ul style="list-style-type:none;"> <?php
                                       while($rowsubSubtopic=mysqli_fetch_array($resSubSubtopic)){
                                         ?>
-                                        <p><li style="text-indent:30px; line-height:8px;"><?=$maintopicCount.".".$subtopicCount.".".$subsubtopicCount." ".$rowsubSubtopic['subtopicsub_name'];?></li></p>                            
+                                        <p><li style="text-indent:30px; line-height:10px;"><?=$maintopicCount.".".$subtopicCount.".".$subsubtopicCount." ".$rowsubSubtopic['subtopicsub_name'];?></li></p>                            
                                       <?php
                                       $subsubtopicCount++;
                                     }
@@ -193,16 +181,8 @@ include("_includes/config.php");
                        <button  type="button" class="btn btn-primary btn-rounded btn-icon maintopicedit btn-sm" data-toggle="modal" data-id='<?php echo $arr['course_id']; ?>'
                         style="color: aliceblue"> <i class="fas fa-pen"></i> </button>
 
-                                                               
-                        <!-- <a href="maintopic.php?delmaintopic_id=<?php echo $arr['maintopic_id']; ?>"><button type="button" class="btn btn-danger btn-rounded btn-icon btn-sm"  style="color: aliceblue"> <i class="fas fa-trash"></i> </button></a> -->
-
-
 
                         <a href="maintopic.php?delid=<?php echo $arr['course_id']; ?>"><button type="button" class="btn btn-danger btn-rounded btn-icon btn-sm"  style="color: aliceblue"> <i class="fas fa-trash"></i> </button></a>
-
-                       
-                        <!-- <a href="manual-attendance.php?delid=<?php echo $arr['id']; ?>"><button type="button" class="btn btn-primary btn-rounded btn-icon"  style="color: aliceblue"> <i class="fas fa-eye"></i> </button></a> -->
-
                                                          
                                                </td> 
                        
@@ -211,7 +191,7 @@ include("_includes/config.php");
     
                                                  
     <?php
-    } 
+     $count++; } 
     ?>
                     </tbody>
 

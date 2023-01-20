@@ -412,12 +412,12 @@ if(isset($_POST['dnk5'])){
   <div class="col-md-12">
     <div class="form-group">
       <label for="date">
-     Student Name  <span class="text-danger">*</span>
+     Service Name: <span class="text-danger">*</span>
       </label>
       <div class="input-group">
       <input type="hidden" name="id" value="'.$row['id'].'">
          
-        <input class="form-control" placeholder="name" name="student_name" type="text" value="'.$row['student_name'].'" data-dtp="dtp_dl6pL">
+        <input class="form-control" placeholder="name" name="service_name" type="text" value="'.$row['service_name'].'" data-       dtp="dtp_dl6pL">
         
       </div>
     </div>
@@ -428,10 +428,10 @@ if(isset($_POST['dnk5'])){
   <div class="col-md-12">
     <div class="form-group">
       <label for="date">
-      Student Description <span class="text-danger">*</span>
+      Service Content<span class="text-danger">*</span>
       </label>
       <div class="input-group">
-        <input class="form-control" placeholder="description" name="student_description" type="text" value="'.$row['student_description'].'" data-dtp="dtp_dl6pL">
+        <input class="form-control" placeholder="description" name="service_content" type="text" value="'.$row['service_content'].'" data-dtp="dtp_dl6pL">
         
       </div>
     </div>
@@ -452,19 +452,7 @@ Image   <span class="text-danger">*</span>
 </div>
  
 </div>
-<div class="row">
-  <div class="col-md-12">
-    <div class="form-group">
-      <label for="date">
-      Student Degree <span class="text-danger">*</span>
-      </label>
-      <div class="input-group">
-        <input class="form-control" placeholder="description" name="student_degree" type="text" value="'.$row['student_degree'].'" data-dtp="dtp_dl6pL">
-        
-      </div>
-    </div>
-  </div>
-</div>
+
 ';
 }
 ?>
@@ -729,23 +717,6 @@ if(isset($_POST['dnkk9'])){
   $query=mysqli_query($conn,"select * from maintopic where course_id='".$_POST['dnkk9']."'");
   $row=mysqli_fetch_array($query);
   echo ' 
-  <div class="row">
-  <div class="col-md-12">
-    <div class="form-group">
-      <label for="date">
-      Course Name  <span class="text-danger">*</span>
-      </label>
-      <div class="input-group">
-      <input type="hidden" name="course_id" value="'.$row['course_id'].'">
-         
-      
-        
-      </div>
-    </div>
-  </div>
-</div>
-
- 
 <div class="row">
 <div class="col-md-12">
 <div class="form-group">
@@ -753,7 +724,7 @@ if(isset($_POST['dnkk9'])){
   Maintopic Name<span class="text-danger">*</span>
   </label>
   <div class="input-group">
-   
+  <input type="hidden" name="course_id" value="'.$row['course_id'].'">
   <input class="form-control" placeholder="" name="maintopic_name" type="text" value="'.$row['maintopic_name'].'" data-dtp="dtp_dl6pL">    
   </div>
 </div>
@@ -766,7 +737,7 @@ if(isset($_POST['dnkk9'])){
 ?>
 <?php
 if(isset($_POST['dnkk8'])){
-  $query=mysqli_query($conn,"select * from subtopic where subtopic_id='".$_POST['dnkk8']."'");
+  $query=mysqli_query($conn,"select * from subtopic where course_id='".$_POST['dnkk8']."'");
   $row=mysqli_fetch_array($query);
   echo ' 
  
@@ -779,7 +750,7 @@ if(isset($_POST['dnkk8'])){
   subtopic_name<span class="text-danger">*</span>
   </label>
   <div class="input-group">
-  <input type="hidden" name="subtopic_id" value="'.$row['subtopic_id'].'">
+  <input type="hidden" name="course_id" value="'.$row['course_id'].'">
   <input class="form-control" placeholder="Enter  name" name="subtopic_name" type="text" value="'.$row['subtopic_name'].'" data-dtp="dtp_dl6pL">    
   </div>
 </div>
@@ -793,48 +764,18 @@ if(isset($_POST['dnkk8'])){
 
 <?php
 if(isset($_POST['dnkk7'])){
-  $query=mysqli_query($conn,"select * from subtopic_sub where subtopicsub_id='".$_POST['dnkk7']."'");
+  $query=mysqli_query($conn,"select * from subtopic_sub where course_id='".$_POST['dnkk7']."'");
   $row=mysqli_fetch_array($query);
   echo ' 
- 
- 
-
 <div class="row">
 <div class="col-md-12">
 <div class="form-group">
   <label for="date">
- Course name<span class="text-danger">*</span>
+ sub-Subtopic name<span class="text-danger">*</span>
   </label>
   <div class="input-group">
-  <input type="hidden" name="subtopicsub_id" value="'.$row['subtopicsub_id'].'">
-  <input class="form-control" placeholder="Enter Course name" name="course_name" type="text" value="'.$row['course_name'].'" data-dtp="dtp_dl6pL">    
-  </div>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-12">
-<div class="form-group">
-  <label for="date">
-  maintopic name<span class="text-danger">*</span>
-  </label>
-  <div class="input-group">
-  <input class="form-control" placeholder="Enter  name" name="maintopic_name" type="text" value="'.$row['maintopic_name'].'" data-dtp="dtp_dl6pL">    
-  </div>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-12">
-<div class="form-group">
-  <label for="date">
-  subtopic sub name<span class="text-danger">*</span>
-  </label>
-  <div class="input-group">
- 
-  <input class="form-control" placeholder="Enter  name" name="subtopicsub_name" type="text" value="'.$row['subtopicsub_name'].'" data-dtp="dtp_dl6pL">    
+  <input type="hidden" name="course_id" value="'.$row['course_id'].'">
+  <input class="form-control" placeholder="Enter sub-subtopic name" name="subtopicsub_name" type="text" value="'.$row['subtopicsub_name'].'" data-dtp="dtp_dl6pL">    
   </div>
 </div>
 </div>

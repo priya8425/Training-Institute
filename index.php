@@ -140,17 +140,23 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="owl-service-item owl-carousel">
-            
-              <div class="item">
+              <?php
+              
+              $sql=mysqli_query($conn,"Select * from home_page");
+              if(mysqli_num_rows($sql)>0){
+              while($arr=mysqli_fetch_array($sql)){
+              ?>
+              <div class="item" style="height:300px;">
                 <div class="icon">
-                  <img src="assets/images/service-icon-01.png" alt="">
+                  <img src="assets/images/<?php echo $arr['image'];?>" alt="">
                 </div>
                 <div class="down-content">
-                  <h4>Best Education</h4>
-                  <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+                  <h4><?php echo $arr['service_name'];?></h4>
+                  <p><?php echo $arr['service_content'];?></p>
                 </div>
               </div>
-              <div class="item">
+                <?php } } ?>
+              <!-- <div class="item">
                 <div class="icon">
                   <img src="assets/images/service-icon-02.png" alt="">
                 </div>
@@ -158,34 +164,7 @@
                   <h4>Best Teachers</h4>
                   <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
                 </div>
-              </div>
-              <div class="item">
-                <div class="icon">
-                  <img src="assets/images/service-icon-03.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Best Students</h4>
-                  <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                </div>
-              </div>
-              <div class="item">
-                <div class="icon">
-                  <img src="assets/images/service-icon-02.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Online Meeting</h4>
-                  <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                </div>
-              </div>
-              <div class="item">
-                <div class="icon">
-                  <img src="assets/images/service-icon-03.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Best Networking</h4>
-                  <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                </div>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
@@ -231,15 +210,11 @@
                     <a href="meeting-details.html"><img src="admin/dist/img/<?php echo $arr['image'];?>" alt="New Lecturer Meeting" style="height:250px;"></a>
                   </div>
                   <div class="down-content">
-                    <div class="date">
-                      <h6>Nov <span>10</span></h6>
-                    </div>
                     <a href="meeting-details.html"><h4>New Lecturers Meeting</h4></a>
-                    <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                    <p>Morbi in libero blandit lectus.</p>
                   </div>
                 </div>
               </div>
-              
                 <?php } } ?>
               <!-- <div class="col-lg-6">
                 <div class="meeting-item">

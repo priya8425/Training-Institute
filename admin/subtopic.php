@@ -5,34 +5,25 @@ include("_includes/config.php");
 //     header("location:adminlogin.php");
 // } 
 
-if(isset($_GET['delsubtopic_id'])){
-  $subtopic_id=mysqli_real_escape_string($conn,$_GET['delsubtopic_id']);
-  $sql=mysqli_query($conn,"delete from subtopic where subtopic_id='$subtopic_id'");
-  if($sql=1){
-      header("location:subtopic.php");
-  }
-  }
 
+  if(isset($_GET['delid'])){
+    $course_id=mysqli_real_escape_string($conn,$_GET['delid']);
+    $sql=mysqli_query($conn,"delete from subtopic where course_id='$course_id'");
+    if($sql=1){
+        header("location:subtopic.php");
+    }
+    }
   if(isset($_POST['subtopicedit1'])){
-   
-      $subtopic_id=$_POST['subtopic_id'];
-      $description = $_POST['description'];
-      $image=$_FILES['image']['name'];
-     $dnk=$_FILES['image']['tmp_name'];
-     $loc="../../dist/img/credit/".$image;
-       move_uploaded_file($dnk,$loc);
-       $name = $_POST['name'];
-      
-       $sql="UPDATE `subtopic` SET `description`='$description',`image`='$image',`name`='$name' WHERE id='$id'";
-       if (mysqli_query($conn, $sql)){
-        
-         echo "<script>alert('Successfully Updated');</script>";
-      } else {
-         echo "<script> alert ('connection failed !');window.location.href='trainning.php'</script>";
-      }
-     }
-  
-
+    $course_id=$_POST['course_id'];
+    $subtopic_name = $_POST['subtopic_name'];
+    $sql="UPDATE `subtopic` SET `subtopic_name`='$subtopic_name' WHERE course_id='$course_id'";
+    if (mysqli_query($conn, $sql)){
+      // header("location:new_project.php");
+      echo "<script>alert('Successfully Updated');</script>";
+   } else {
+      echo "<script> alert ('connection failed !');window.location.href='subtopic.php'</script>";
+   }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -190,10 +181,10 @@ if(isset($_GET['delsubtopic_id'])){
                           ?>
                                   </td>
                                     <td>
-                       <button  type="button" class="btn btn-primary btn-rounded btn-icon subtopicedit btn-sm" data-toggle="modal" data-id='<?php echo $arr['subtopic_id']; ?>'
+                       <button  type="button" class="btn btn-primary btn-rounded btn-icon subtopicedit btn-sm" data-toggle="modal" data-id='<?php echo $arr['course_id']; ?>'
                         style="color: aliceblue"> <i class="fas fa-pen"></i> </button>
                                                                
-                        <a href="subtopic.php?delsubtopic_id=<?php echo $arr['subtopic']; ?>"><button type="button" class="btn btn-danger btn-rounded btn-icon btn-sm"  style="color: aliceblue"> <i class="fas fa-trash"></i> </button></a> </td>         
+                        <a href="subtopic.php?delid=<?php echo $arr['course_id']; ?>"><button type="button" class="btn btn-danger btn-rounded btn-icon btn-sm"  style="color: aliceblue"> <i class="fas fa-trash"></i> </button></a> </td>         
     </tr>     
     
                                                  

@@ -1,3 +1,35 @@
+<?php
+include("_includes/config.php");
+// session_start();
+// if(!isset($_SESSION['id'])){
+//     header("location:adminlogin.php");
+// } 
+    if(isset($_POST['submit']))
+    {
+        $course_name = $_POST['course_name'];
+        $course_description = $_POST['course_description'];
+        $image = $_FILES['image']['name'];
+        $tmp_name = $_FILES['image']['tmp_name'];
+        $path = "dist/img/".$image;
+        move_uploaded_file($tmp_name,$path);
+        $price = $_POST['price'];
+        $instructor = $_POST['instructor'];
+        $about_course = $_POST['about_course'];
+        $paragraph = $_POST['paragraph'];
+        $heading = $_POST['heading'];
+        $paragraph1 = $_POST['paragraph1'];
+        $second_heading = $_POST['second_heading'];
+        $paragraph2 = $_POST['paragraph2'];
+       
+        
+        $query = "INSERT INTO `course`(`course_name`,`course_description`,`image`,`price`,`instructor`,`about_course`,`paragraph`,`heading`,`paragraph1`,`second_heading`,`paragraph2`) VALUES ('$course_name','$course_description','$image','$price','$instructor','$about_course','$paragraph','$heading','$paragraph1','$second_heading','$paragraph2')";
+        if (mysqli_query($conn, $query)){
+          echo "<script> alert ('New record has been added successfully !');window.location='course.php'</script>";
+       } else {
+          echo "<script> alert ('connection failed !');</script>";
+       }
+    }
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,247 +90,116 @@ include("_includes/sidebar.php");
           </div>
         </div><!-- /.container-fluid -->
       </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
           <!-- SELECT2 EXAMPLE -->
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">Project Form</h3>
+              <h3 class="card-title">Course Details Form</h3>
 
             </div>
             <!-- /.card-header -->
             <div class="card-body">
               <form method="post">
-
-
                 <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                 <label>Property ID</label>
-                 <input type="text" class="form-control" placeholder="Enter Name">
-                    </div>
-                    </div>
-                    <div class="col-md-6">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Course Name</label>
+                        <input type="text" class="form-control" name="course_name" placeholder="Enter Name">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
                     <div class="form-group">
-                      <label> Building Name</label>
-                      <input type="text" class="form-control" placeholder="Enter Name">
+                        <label>Course Description</label>
+                        <input type="text" class="form-control" name="course_description" placeholder="Enter Name">
                     </div>
-                    </div>
-                    </div>
-
+                  </div>
+                </div>
                 <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                 <label>Property</label>
-                      <select class="select2" multiple="multiple" data-placeholder="Select a State"
-                        style="width: 100%;">
-                        <option value="select" disabled>select</option>
-                        <option value="project">New Project</option>
-                        <option value="resale">Resale</option>
-                        <option value="rent">Rent</option>
-
-                      </select>
-                    </div>
-                    </div>
                     <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Image</label>
+                        <input type="file" class="form-control" placeholder="Enter contact number">
+                      </div>
+                    </div>
+                  <div class="col-md-6">
                     <div class="form-group">
-                    <label>Carpet Area(sq-ft)</label>
-                      <input type="text" class="form-control" placeholder="Enter Area">
+                        <label>Price</label>
+                        <input type="text" class="form-control" name="price" placeholder="Enter Name">
                     </div>
-                    </div>
-                    </div>
-
-                    <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                  <label>Location</label>
-                      <input type="text" class="form-control" placeholder="Enter location">
-                    </div>
-                    </div>
-                    <div class="col-md-6">
-                    <div class="form-group">
-                    <label>Built-up Area(sq-ft)</label>
-                      <input type="tel" class="form-control" placeholder="Enter contact number">
-                    </div>
-                    </div>
-                    </div>
-
-             <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                  <label>Age of Construction</label>
-                      <select class="select2" multiple="multiple" data-placeholder="Age of Construction"
-                        style="width: 100%;">
-                        <option value="select" disabled>select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-
-                      </select>
-                    </div>
-                    </div>
-                    <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Facing</label>
-                      <input type="text" class="form-control" placeholder="Enter Facing">
-                    </div>
-                    </div>
-                    </div>
-
-                    <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                  <label>Price</label>
-                      <input type="text" class="form-control" placeholder="Enter location">
-                    </div>
-                    </div>
-                    <div class="col-md-6">
-                    <div class="form-group">
-                    <label>Image</label>
-                      <input type="file" class="form-control" placeholder="Enter contact number">
-                    </div>
-                    </div>
-                    </div>
-
-       
-                    <div class="row">
-                    <div class="col-md-6">
-                <label>Power Backup</label>
-                  <div class="form-group">
-                  <div class="form-check">
-                  <input class="form-check-input" type="checkbox">
-                  <label class="form-check-label">YES</label>
                   </div>
-                  <div class="form-check">
-                  <input class="form-check-input" type="checkbox">
-                  <label class="form-check-label">NO</label>
-                  </div>
-                  </div>
-                    </div>
-                    <div class="col-md-6">
-                    <div class="form-group">
-                    <label>Furnishing</label>
-                  <div class="form-check">
-                  <input class="form-check-input" type="checkbox">
-                  <label class="form-check-label">YES</label>
-                  </div>
-                  <div class="form-check">
-                  <input class="form-check-input" type="checkbox">
-                  <label class="form-check-label">NO</label>
-                  </div>
-                  </div>
-                    </div>
-                    </div>
-
-
+                </div>
                 <div class="row">
-                <div class="col-md-6">
-                <label>Description</label>
-                   <div class="form-group">
-              <textarea id="summernote">
-                Place <em>some</em> <u>text</u> <strong>here</strong>
-              </textarea>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Instructor</label>
+                        <input type="text" class="form-control" name="instructor" placeholder="Enter Name">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label>about_course</label>
+                        <input type="text" class="form-control" name="about_course" placeholder="Enter Name">
+                    </div>
+                  </div>
+                    
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label>heading</label>
+                        <input type="text" class="form-control" name="heading" placeholder="Enter Name">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Second Heading Of course</label>
+                      <input type="text" class="form-control" name="second_heading" placeholder="Enter Name">
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                      <label>Paragraph</label>
+                    <div class="form-group">
+                      <textarea id="summernote" name="paragraph">
+                        Place <em>some</em> <u>text</u> <strong>here</strong>
+                      </textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                      <label>Second Paragraph Of course</label>
+                    <div class="form-group">
+                      <textarea id="summernote1" name="paragraph1">
+                        Place <em>some</em> <u>text</u> <strong>here</strong>
+                      </textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                      <label>Third Paragraph Of course</label>
+                    <div class="form-group">
+                      <textarea id="summernote2" name="paragraph2">
+                        Place <em>some</em> <u>text</u> <strong>here</strong>
+                      </textarea>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary" style="float: right;">Submit</button>
+              </form>
             </div>
-                    </div>
-                    <div class="col-md-6">
-                    <div class="form-group">
-                    <label>Amenities</label>
-                  <div class="form-group">         
-<div class="row">
-<div class="col-sm-4">
-<div class="form-group">
-<div class="form-check">
-<input class="form-check-input" type="checkbox">
-<label class="form-check-label">Children Play Area</label>
-</div>
-<div class="form-check">
-<input class="form-check-input" type="checkbox">
-<label class="form-check-label">Gym</label>
-</div>
-<div class="form-check">
-<input class="form-check-input" type="checkbox">
-<label class="form-check-label">High Tech Lift</label>
-</div>
-</div>
-</div>
-<div class="col-sm-7">
-
-<div class="form-group">
-<div class="form-check">
-<input class="form-check-input" type="checkbox">
-<label class="form-check-label">Wifi-Connectivity</label>
-</div>
-<div class="form-check">
-<input class="form-check-input" type="checkbox">
-<label class="form-check-label">Swimming Pool</label>
-</div>
-<div class="form-check">
-<input class="form-check-input" type="checkbox">
-<label class="form-check-label">Terrace garden</label>
-</div>
-</div>
-</div>
-</div>
-  </div>
- </div>
- 
-</div>
-</form>
-</div>
-</div>
-</div>
-</section>
-
-
-
-  </div>
+          </div>
+        </div>
+      </section>
+    </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
+    <!-- <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.2.0
-    </div>
+    </div> -->
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
   </footer>
 
@@ -350,56 +251,56 @@ include("_includes/sidebar.php");
       })
 
       //Datemask dd/mm/yyyy
-      $('#datemask').inputmask('dd/mm/yyyy', {
-        'placeholder': 'dd/mm/yyyy'
-      })
-      //Datemask2 mm/dd/yyyy
-      $('#datemask2').inputmask('mm/dd/yyyy', {
-        'placeholder': 'mm/dd/yyyy'
-      })
-      //Money Euro
-      $('[data-mask]').inputmask()
+      // $('#datemask').inputmask('dd/mm/yyyy', {
+      //   'placeholder': 'dd/mm/yyyy'
+      // })
+      // //Datemask2 mm/dd/yyyy
+      // $('#datemask2').inputmask('mm/dd/yyyy', {
+      //   'placeholder': 'mm/dd/yyyy'
+      // })
+      // //Money Euro
+      // $('[data-mask]').inputmask()
 
-      //Date picker
-      $('#reservationdate').datetimepicker({
-        format: 'L'
-      });
+      // //Date picker
+      // $('#reservationdate').datetimepicker({
+      //   format: 'L'
+      // });
 
-      //Date and time picker
-      $('#reservationdatetime').datetimepicker({
-        icons: {
-          time: 'far fa-clock'
-        }
+      // //Date and time picker
+      // $('#reservationdatetime').datetimepicker({
+      //   icons: {
+      //     time: 'far fa-clock'
+      //   }
       });
 
       //Date range picker
-      $('#reservation').daterangepicker()
+      // $('#reservation').daterangepicker()
       //Date range picker with time picker
-      $('#reservationtime').daterangepicker({
-        timePicker: true,
-        timePickerIncrement: 30,
-        locale: {
-          format: 'MM/DD/YYYY hh:mm A'
-        }
-      })
+      // $('#reservationtime').daterangepicker({
+      //   timePicker: true,
+      //   timePickerIncrement: 30,
+      //   locale: {
+      //     format: 'MM/DD/YYYY hh:mm A'
+      //   }
+      // })
       //Date range as a button
-      $('#daterange-btn').daterangepicker({
-          ranges: {
-            'Today': [moment(), moment()],
-            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-            'This Month': [moment().startOf('month'), moment().endOf('month')],
-            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf(
-              'month')]
-          },
-          startDate: moment().subtract(29, 'days'),
-          endDate: moment()
-        },
-        function (start, end) {
-          $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-        }
-      )
+      // $('#daterange-btn').daterangepicker({
+      //     ranges: {
+      //       'Today': [moment(), moment()],
+      //       'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+      //       'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+      //       'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+      //       'This Month': [moment().startOf('month'), moment().endOf('month')],
+      //       'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf(
+      //         'month')]
+      //     },
+      //     startDate: moment().subtract(29, 'days'),
+      //     endDate: moment()
+      //   },
+      //   function (start, end) {
+      //     $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+      //   }
+      // )
 
       //Timepicker
       $('#timepicker').datetimepicker({
@@ -487,6 +388,26 @@ include("_includes/sidebar.php");
   $(function () {
     // Summernote
     $('#summernote').summernote()
+
+    // CodeMirror
+    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+      mode: "htmlmixed",
+      theme: "monokai"
+    });
+  })
+  $(function () {
+    // Summernote
+    $('#summernote1').summernote()
+
+    // CodeMirror
+    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+      mode: "htmlmixed",
+      theme: "monokai"
+    });
+  })
+  $(function () {
+    // Summernote
+    $('#summernote2').summernote()
 
     // CodeMirror
     CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {

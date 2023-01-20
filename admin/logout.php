@@ -1,11 +1,9 @@
-<?php
-include("_includes/config.php");
-session_start();
-$dnk=session_destroy();
-if($dnk){
-    header("location:adminlogin.php");
-}else{
-    header("location:index.php");
-    echo"<script>alert('There were some problems with your input.');</script>";
-}
-?>
+
+  <?php
+  session_start();
+  echo "<script type='text/javascript'>alert('logout sucessfully!');
+  window.location.href='login.php';</script>";
+   session_destroy(); 
+   
+   ?>
+   

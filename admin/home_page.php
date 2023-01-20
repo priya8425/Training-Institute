@@ -17,16 +17,16 @@ if(isset($_GET['delid'])){
     $id=$_POST['id'];
     $service_name = $_POST['service_name'];
     $service_content = $_POST['service_content'];
-    $student_name = $_POST['student_name'];
-    $student_description = $_POST['student_description'];
-    $student_degree = $_POST['student_degree'];
+    // $student_name = $_POST['student_name'];
+    // $student_description = $_POST['student_description'];
+    // $student_degree = $_POST['student_degree'];
     $image=$_FILES['image']['name'];
   $dnk=$_FILES['image']['tmp_name'];
     $loc="dist/img/".$image;
     move_uploaded_file($dnk,$loc);
    
    
-    $sql="UPDATE `home_page` SET `service_name`='$service_name',`service_content`='$service_content',`student_name`='$student_name',`student_description`='$student_description',`student_degree`='$student_degree',`image`='$image' WHERE id='$id'";
+    $sql="UPDATE `home_page` SET `service_name`='$service_name',`service_content`='$service_content',`image`='$image' WHERE id='$id'";
     if (mysqli_query($conn, $sql)){
       // header("location:new_project.php");
       echo "<script>alert('Successfully Updated');</script>";
@@ -114,10 +114,10 @@ if(isset($_GET['delid'])){
               <div class="card">
                 <div class="card-header" style="padding:0px;">
                   <h3 class="card-title" style="padding-top:25px; margin-left:10px;">Home Page</h3>
-                  <div class="card-tools my-3" style="text-align:end;">
+                  <!-- <div class="card-tools my-3" style="text-align:end;">
                     <a class="btn btn-primary" href="homepage_form.php" data-tt="tooltip" title=""
                       data-original-title="Click here to Add project" style="margin-right:20px;">Add About Student</a>
-                  </div>
+                  </div> -->
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -125,10 +125,6 @@ if(isset($_GET['delid'])){
                   <thead>
                       <tr>
                         <th>Service Name</th>
-                        <th>Service Content</th>
-                        <th>Student Name</th>
-                        <th>Student Description</th>
-                        <th>Student Degree</th>
                         <th>Image</th>
                         <th>Action</th>
                       </tr>
@@ -142,17 +138,8 @@ if(isset($_GET['delid'])){
                       <td>
                           <?php echo $arr['service_name'];?>
                         </td>
-                        <td>
+                         <td>
                           <?php echo $arr['service_content'];?>
-                        </td>
-                        <td>
-                          <?php echo $arr['student_name'];?>
-                        </td>
-                        <td>
-                          <?php echo $arr['student_description'];?>
-                        </td>
-                        <td>
-                          <?php echo $arr['student_degree'];?>
                         </td>
                         <td>
                         <img src="dist/img/<?php echo $arr['image'];?>" style="height:80px; width:70px;"> 

@@ -87,7 +87,6 @@ https://templatemo.com/tm-569-edu-meeting
   </div>
 
   <!-- ***** Header Area Start ***** -->
-  
   <header class="header-area header-sticky">
       <div class="container">
           <div class="row">

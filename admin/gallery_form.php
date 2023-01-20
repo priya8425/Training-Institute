@@ -6,23 +6,23 @@ include("_includes/config.php");
 // } 
     if(isset($_POST['submit']))
     {
-        $service_name = $_POST['service_name'];
-        $service_content = $_POST['service_content'];
+        
         $image = $_FILES['image']['name'];
         $tmp_name = $_FILES['image']['tmp_name'];
         $path = "dist/img/".$image;
         move_uploaded_file($tmp_name,$path);
-        // $student_description = $_POST['student_description'];
-        // $student_name = $_POST['student_name'];
-        // $student_degree = $_POST['student_degree'];
-
-        $query = "INSERT INTO `home_page`(`service_name`,`service_content`,`image`) VALUES                   
-         ('$service_name','$service_content','$image')";
+        $video = $_FILES['video']['name'];
+        $tmp_name1 = $_FILES['video']['tmp_name1'];
+        $path = "dist/img/".$video;
+        move_uploaded_file($tmp_name1,$path);
+        $name = $_POST['name'];
+        $content = $_POST['content'];
+        $query = "INSERT INTO `gallery`(`image`,`video`,`name`,`content`) VALUES ('$image','$video','$name','$content')";
         if (mysqli_query($conn, $query)){
-            echo "<script> alert ('New record has been added successfully !');window.location='home_page.php'</script>";
-        } else {
-            echo "<script> alert ('connection failed !');</script>";
-        }
+          echo "<script> alert ('New record has been added successfully !');window.location='gallery_form.php'</script>";
+       } else {
+          echo "<script> alert ('connection failed !');</script>";
+       }
     }
   ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ include("_includes/config.php");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>Marcks Training | Homepage FORM </title>
+  <title>Marcks Training | About FORM </title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -75,30 +75,30 @@ include("_includes/config.php");
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">    
-          <h1>Homepage Form</h1>
+          <h1>Gallery Form</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Homepage Form</li>
+              <li class="breadcrumb-item active">Gallery Form</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
           <!-- SELECT2 EXAMPLE -->
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">Homepage Form</h3>
+              <h3 class="card-title">Gallery Form</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
               <form method="post" enctype="multipart/form-data">
-                  <!-- /.col -->
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -108,22 +108,34 @@ include("_includes/config.php");
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Service Name</label>
-                      <input type="text" class="form-control" name="service_name" placeholder="Enter ">
+                      <label>Video</label><span style="color:red;"></span>
+                      <input type="file" name="video" class="form-control">
                     </div>
                   </div>
                 </div>
-                <!-- /.row -->
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Service Description</label>
-                      <input type="text" class="form-control" name="service_description" placeholder="Enter Name">
+                      <label>Name</label>
+                      <input type="text" class="form-control" name="name" placeholder="Enter Name">
                     </div>
 
                   </div>
                   <!-- /.col -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Content</label>
+                      <input type="text" class="form-control" name="content" placeholder="">
+                    </div>
+
+                  </div>
                 </div>
+                  <!-- /.col -->
+                
+                <!-- /.row -->
+
+
+
                 <!-- /.form-group -->
                 <button type="submit" name="submit" class="btn btn-primary" style="float: right;">Submit</button>
             </div>
@@ -183,8 +195,6 @@ include("_includes/footer.php");
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
+
 </body>
 </html>

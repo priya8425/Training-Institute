@@ -7,19 +7,19 @@ include("_includes/config.php");
 
 
 if(isset($_POST['submitcourse']))
-    {
-        $subtopicsub_name = $_POST['subtopicsub_name'];
-        $maintopicId = $_POST['maintopicId'];
-        $courseId = $_POST['courseId'];
-        $subtopicId = $_POST['subtopicId'];
-        $sql="INSERT INTO `subtopic_sub`(`subtopicsub_name`,`subtopic_id`,`maintopic_id`,`course_id`) VALUES ('$subtopicsub_name',$subtopicId,$maintopicId,$courseId)";
-        if (mysqli_query($conn, $sql)){
-          echo "<script> alert ('New record has been added successfully !');window.location.href='subtopic.php'</script>";
-       }
-        else {
-          echo "<script> alert ('connection failed !');</script>";
-       }
-    }
+{
+    $subtopicsub_name = $_POST['subtopicsub_name'];
+    $maintopicId = $_POST['maintopic_id'];
+    $courseId = $_POST['course_id'];
+    $sql="INSERT INTO `subtopic_sub`(`subtopicsub_name`,`maintopic_id`,`course_id`) VALUES ('$subtopicsub_name','$maintopicId',
+    '$courseId')";
+    if (mysqli_query($conn, $sql)){
+      echo "<script> alert ('New record has been added successfully !');window.location.href='sub_subtopic.php'</script>";
+   }
+    else {
+      echo "<script> alert ('connection failed !');</script>";
+   }
+}
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,7 +86,7 @@ if(isset($_POST['submitcourse']))
 
     <!-- Main content -->
     <section class="content">
-    <div class="row">
+          <div class="row">
             <div class="col-md-12">
               <div class="card card-primary">
 
@@ -98,7 +98,7 @@ if(isset($_POST['submitcourse']))
                           <div class="col-md-6">
                             <div class="form-group col">
                             <label for="exampleInputEmail1">Course Name</label>
-                              <select class="form-control" name="courseId" id="courseId" onchange="getmainTopic();">
+                              <select class="form-control" name="course_id" id="courseId" onchange="getmainTopic(this.value);">
                                 <?php
                                 $result=mysqli_query($conn,"select * from course order by course_id desc");
                                 if(mysqli_num_rows($result)>0){
@@ -115,7 +115,7 @@ if(isset($_POST['submitcourse']))
                           <div class="col-md-6">
                             <div class="form-group col">
                                 <label for="exampleInputEmail1">Mani Topic</label>
-                                  <select class="form-control" name="maintopicId" id="maintopicId" onchange="getsubTopic();">
+                                  <select class="form-control" name="maintopic_id" id="maintopicId" onchange="getsubTopic(this.value);">
                                     
                                   </select>
                             </div>
@@ -125,7 +125,7 @@ if(isset($_POST['submitcourse']))
                       <div class="col-md-6">
                             <div class="form-group col">
                                 <label for="exampleInputEmail1">subtopic Topic</label>
-                                  <select class="form-control" name="subtopicId" id="subtopicId">
+                                  <select class="form-control" name="subtopic_id" id="subtopicId" >
                                     
                                   </select>
                             </div>
@@ -195,9 +195,38 @@ include("_includes/footer.php");
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<!-- \AdminLTE for demo purposes
+<script src="dist/js/demo.js"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
+<!-- <script src="dist/js/pages/dashboard.js"></script> -->
+<script>
+  function getmainTopic(val){
+    // alert(val);
+    $.ajax({
+      url:"ajaxgetmaintopic.php",
+      type:"post",
+      data:{course_id:val,action:"getmaintopic"},
+      success:function(response){
+        // alert(response);
+        $("#maintopicId").html(response)
+      }
+    })
+  }
+  
+  function getsubTopic(val){
+    //alert(val);
+      var course_id=$("#courseId").val();
+      // alert(val+ " "+course_id);
+      $.ajax({
+        url:"ajaxgetmaintopic.php",
+        type:"post",
+        data:{course_id:course_id,maintopic_id:val,action:"getsubtopic"},
+        success:function(response){
+          // alert(response);
+          $("#subtopicId").html(response);
+        }
+      })
+  }
+  </script>
 </body>
 </html>

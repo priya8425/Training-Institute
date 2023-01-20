@@ -198,18 +198,17 @@ https://templatemo.com/tm-569-edu-meeting
                 <h3 style="color:white;">WHY OUR SOFTWARE TRAINERS</h3>
                 <br>
                 <br>
-                <ul style="color:white; font-size:13px;">
-                    <li>Assessing individual/group training needs</li>
-                    <li>Planning, preparing and researching lessons</li>
-                    <li>Developing and delivering programmes of learning activities</li>
-                    <li>Preparing teaching/course materials</li>
-                    <li>Teaching time with students on an individual or group basis</li>
-                    <li>Checking and assessing students work and giving feedback</li>
-                    <li>Making use of new technology such as distance learning or video conferencing</li>
-                    <li>Keeping personal IT skills and knowledge up to date</li>
-                </ul>
+                  <P style="color:white; font-size:13px;">
+                    Assessing individual/group training needs   
+                    Planning, preparing and researching lessons   
+                    Developing and delivering programmes of learning activities   
+                    Preparing teaching/course materials   
+                    Teaching time with students on an individual or group basis                      
+                     Checking and assessing students work and giving feedback    
+                    Making use of new technology such as distance learning or video conferencing</li>
+                    Keeping personal IT skills and knowledge up to date 
+                  </p>  
             </div>
-            
             <div class="col-lg-4">
                         <div class="right-info" style="color:white;"    >
                         

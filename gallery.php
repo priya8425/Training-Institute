@@ -1,3 +1,6 @@
+<?php
+include("includes/configure.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -149,208 +152,113 @@ https://templatemo.com/tm-569-edu-meeting
             </div>
             <div class="col-lg-12">
                 <div class="row grid">
-                    
-                    <div class="col-lg-4 templatemo-item-col all pht ">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                        <div class="price">
-                            <span>$22.00</span>
-                        </div>
-                        <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>14</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
-                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                        </div>
-                    </div>
-                    </div>
-                    
+                        <?php
+                          $sql=mysqli_query($conn,"Select * from gallery");
+                          if(mysqli_num_rows($sql)>0){
+                          while($arr=mysqli_fetch_array($sql)){
+                        ?>
                     <div class="col-lg-4 templatemo-item-col all pht">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                        <div class="price">
-                            <span>$32.00</span>
-                        </div>
-                        <a href="meeting-details.html"><img src="assets/images/meeting-04.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>18</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>Online Teaching Tools</h4></a>
-                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all pht">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                        <div class="price">
-                            <span>$34.00</span>
-                        </div>
-                        <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>22</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>New Teaching Techniques</h4></a>
-                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all pht">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                        <div class="price">
-                            <span>$45.00</span>
-                        </div>
-                        <a href="meeting-details.html"><img src="assets/images/meeting-03.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>24</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>Technology Conference</h4></a>
-                        <p>TemplateMo is the best website<br>when it comes to Free CSS.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all pht">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                        <div class="price">
-                            <span>$52.00</span>
-                        </div>
-                        <a href="meeting-details.html"><img src="assets/images/meeting-01.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>27</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
-                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  pht">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                        <div class="price">
-                            <span>$64.00</span>
-                        </div>
-                        <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>28</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>Instant Lecture Design</h4></a>
-                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all pht">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                        <div class="price">
-                            <span>$32.00</span>
-                        </div>
-                        <a href="meeting-details.html"><img src="assets/images/meeting-04.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>18</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>Online Teaching Tools</h4></a>
-                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all pht">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                        <div class="price">
-                            <span>$34.00</span>
-                        </div>
-                        <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>22</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>New Teaching Techniques</h4></a>
-                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all pht">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                        <div class="price">
-                            <span>$45.00</span>
-                        </div>
-                        <a href="meeting-details.html"><img src="assets/images/meeting-03.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>24</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>Technology Conference</h4></a>
-                        <p>TemplateMo is the best website<br>when it comes to Free CSS.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all pht">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                        <div class="price">
-                            <span>$52.00</span>
-                        </div>
-                        <a href="meeting-details.html"><img src="assets/images/meeting-01.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>27</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
-                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  pht">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                        <div class="price">
-                            <span>$64.00</span>
-                        </div>
-                        <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>28</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>Instant Lecture Design</h4></a>
-                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  soon">
-                    <div class="meeting-item">
-                        <div class="thumb">
-                            <div class="ratio ratio-21x9">
-                                <iframe src="//www.youtube.com/embed/YE7VzlLtp-4"controlsList="nodownload" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
-                            </div>
-                        </div>
-                        <div class="down-content">
-                        <div class="date">
-                            <h6>Nov <span>30</span></h6>
-                        </div>
-                        <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
                         
+                      <div class="meeting-item">
+                          <div class="thumb">
+                          <!-- <div class="price">
+                              <span>$22.00</span>
+                          </div> -->
+                          <a href="meeting-details.html"><img src="admin/dist/img/<?php echo $arr['image'];?>" alt="" style="height: 170px; width: 385.2px;"></a>
+                          </div>
+                          <div class="down-content">
+                          <!-- <div class="date">
+                              <h6>Nov <span>14</span></h6>
+                          </div> -->
+                          <a href="meeting-details.html"><h4><?php echo $arr['name'];?></h4></a>
+                          <h6><?php echo $arr['content'];?></h6>
+                          
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <!-- <div class="col-lg-4 templatemo-item-col all pht">
+                    <div class="meeting-item">
+                        <div class="thumb">
+                        <div class="price">
+                            <span>$32.00</span>
+                        </div>
+                        <a href="meeting-details.html"><img src="assets/images/meeting-04.jpg" alt=""></a>
+                        </div>
+                        <div class="down-content">
+                        <div class="date">
+                            <h6>Nov <span>18</span></h6>
+                        </div>
+                        <a href="meeting-details.html"><h4>Online Teaching Tools</h4></a>
+                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 templatemo-item-col all pht">
+                    <div class="meeting-item">
+                        <div class="thumb">
+                        <div class="price">
+                            <span>$34.00</span>
+                        </div>
+                        <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt=""></a>
+                        </div>
+                        <div class="down-content">
+                        <div class="date">
+                            <h6>Nov <span>22</span></h6>
+                        </div>
+                        <a href="meeting-details.html"><h4>New Teaching Techniques</h4></a>
+                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 templatemo-item-col all pht">
+                    <div class="meeting-item">
+                        <div class="thumb">
+                        <div class="price">
+                            <span>$45.00</span>
+                        </div>
+                        <a href="meeting-details.html"><img src="assets/images/meeting-03.jpg" alt=""></a>
+                        </div>
+                        <div class="down-content">
+                        <div class="date">
+                            <h6>Nov <span>24</span></h6>
+                        </div>
+                        <a href="meeting-details.html"><h4>Technology Conference</h4></a>
+                        <p>TemplateMo is the best website<br>when it comes to Free CSS.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 templatemo-item-col all pht">
+                    <div class="meeting-item">
+                        <div class="thumb">
+                        <div class="price">
+                            <span>$52.00</span>
+                        </div>
+                        <a href="meeting-details.html"><img src="assets/images/meeting-01.jpg" alt=""></a>
+                        </div>
+                        <div class="down-content">
+                        <div class="date">
+                            <h6>Nov <span>27</span></h6>
+                        </div>
+                        <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
+                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 templatemo-item-col all  pht">
+                    <div class="meeting-item">
+                        <div class="thumb">
+                        <div class="price">
+                            <span>$64.00</span>
+                        </div>
+                        <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt=""></a>
+                        </div>
+                        <div class="down-content">
+                        <div class="date">
+                            <h6>Nov <span>28</span></h6>
+                        </div>
+                        <a href="meeting-details.html"><h4>Instant Lecture Design</h4></a>
+                        <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
                         </div>
                     </div>
                     </div>
@@ -358,7 +266,7 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="meeting-item">
                             <div class="thumb">
                                 <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
+                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4"controlsList="nodownload" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
                                 </div>
                             </div>
                             <div class="down-content">
@@ -417,187 +325,27 @@ https://templatemo.com/tm-569-edu-meeting
                             
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="col-lg-4 templatemo-item-col all  soon">
-                        <div class="meeting-item">
-                            <div class="thumb">
+                      <div class="meeting-item">
+                          <div class="thumb">
                                 <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
+                                    <iframe src="admin/dist/img/<?php echo $arr['video'];?>" title="YouTube video" allowfullscreen style="height: 170px; width: 385.2px;"></iframe>
                                 </div>
                             </div>
                             <div class="down-content">
-                            <div class="date">
-                                <h6>Nov <span>30</span></h6>
-                            </div>
-                            <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
                             
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  soon">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
-                                </div>
-                            </div>
-                            <div class="down-content">
-                            <div class="date">
-                                <h6>Nov <span>30</span></h6>
-                            </div>
-                            <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
+                            <a href="meeting-details.html"><h4><?php echo $arr['name'];?></h4></a>
+                            <h6><?php echo $arr['content'];?></h6>
                             
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  soon">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
-                                </div>
-                            </div>
-                            <div class="down-content">
-                            <div class="date">
-                                <h6>Nov <span>30</span></h6>
-                            </div>
-                            <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  soon">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
-                                </div>
-                            </div>
-                            <div class="down-content">
-                            <div class="date">
-                                <h6>Nov <span>30</span></h6>
-                            </div>
-                            <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  soon">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
-                                </div>
-                            </div>
-                            <div class="down-content">
-                            <div class="date">
-                                <h6>Nov <span>30</span></h6>
-                            </div>
-                            <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  soon">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
-                                </div>
-                            </div>
-                            <div class="down-content">
-                            <div class="date">
-                                <h6>Nov <span>30</span></h6>
-                            </div>
-                            <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  soon">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
-                                </div>
-                            </div>
-                            <div class="down-content">
-                            <div class="date">
-                                <h6>Nov <span>30</span></h6>
-                            </div>
-                            <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  soon">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
-                                </div>
-                            </div>
-                            <div class="down-content">
-                            <div class="date">
-                                <h6>Nov <span>30</span></h6>
-                            </div>
-                            <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  soon">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
-                                </div>
-                            </div>
-                            <div class="down-content">
-                            <div class="date">
-                                <h6>Nov <span>30</span></h6>
-                            </div>
-                            <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  soon">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
-                                </div>
-                            </div>
-                            <div class="down-content">
-                            <div class="date">
-                                <h6>Nov <span>30</span></h6>
-                            </div>
-                            <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 templatemo-item-col all  soon">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="ratio ratio-21x9">
-                                    <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video" allowfullscreen style="height: 170px; width:385.2px;"></iframe>
-                                </div>
-                            </div>
-                            <div class="down-content">
-                            <div class="date">
-                                <h6>Nov <span>30</span></h6>
-                            </div>
-                            <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
-                            
-                            </div>
-                        </div>
-                    </div>
-
+                          </div>
+                      </div>
+                    </div> 
+                    
+                    <?php } } ?>
                 </div>
             </div>
-            <div class="col-lg-12">
+            <!-- <div class="col-lg-12">
               <div class="pagination">
                 <ul>
                   <li><a href="#">1</a></li>
@@ -606,7 +354,7 @@ https://templatemo.com/tm-569-edu-meeting
                   <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                 </ul>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

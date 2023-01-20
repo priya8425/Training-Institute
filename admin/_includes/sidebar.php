@@ -127,13 +127,51 @@
           <p>Add Index Background</p>
           </a>
         </li> -->
-        
         <li class="nav-item">
-          <a href="home_page.php" class="nav-link">
-          <i class="nav-icon fas fa-solid fa-id-badge"></i>
-          <p>Add Index Services</p>
+          <a href="#" class="nav-link">
+            <i class=" nav-icon far fa-solid fa-building"></i>
+
+            <p>
+              Index Details
+                 <i class="right fas fa-angle-left"></i>
+             
+            </p>
           </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="home_page.php" class="nav-link">
+              <i class="nav-icon fas fa-solid fa-id-badge"></i>
+              <p>Add Index Services</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="meetings.php" class="nav-link">
+              <i class="nav-icon fab fa-accessible-icon"></i>
+                <p>Add Meeting Link</p>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="subtopic.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Subtopic Course</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="sub_subtopic.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>sub-subtopic Course</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="course_schedule.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Course_schedule</p>
+              </a>
+            </li> -->
+            
+          </ul>
         </li>
+        
 
         <!-- <li class="nav-item">
           <a href="changepassword.php" class="nav-link">

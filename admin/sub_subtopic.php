@@ -4,29 +4,25 @@ include("_includes/config.php");
 // if(!isset($_SESSION['id'])){
 //     header("location:adminlogin.php");
 // } 
-
-if(isset($_GET['delsubtopicsub_id'])){
-  $subtopicsub_id=mysqli_real_escape_string($conn,$_GET['delsubtopicsub_id']);
-  $sql=mysqli_query($conn,"delete from subtopic_sub where subtopicsub_id='$subtopicsub_id'");
+if(isset($_GET['delid'])){
+  $course_id=mysqli_real_escape_string($conn,$_GET['delid']);
+  $sql=mysqli_query($conn,"delete from subtopic_sub where course_id='$course_id'");
   if($sql=1){
-      header("location:subtopic_sub.php");
+      header("location:sub_subtopic.php");
   }
   }
-
   if(isset($_POST['sub_subtopicedit1'])){
-    $name = $_POST['name'];
-   
-    $sql="UPDATE `subtopic_sub` SET `description`='$description',`image`='$image',`name`='$name' WHERE subtopicsub_id='$subtopicsub_id'";
+    $course_id=$_POST['course_id'];
+    $subtopicsub_name = $_POST['subtopicsub_name'];
+    
+    $sql="UPDATE `subtopic_sub` SET `subtopicsub_name`='$subtopicsub_name' WHERE course_id='$course_id'";
     if (mysqli_query($conn, $sql)){
-     
+      // header("location:new_project.php");
       echo "<script>alert('Successfully Updated');</script>";
    } else {
-      echo "<script> alert ('connection failed !');window.location.href='subtopic_sub.php'</script>";
+      echo "<script> alert ('connection failed !');window.location.href='sub_subtopic.php'</script>";
    }
   }
-  
-  
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +102,7 @@ if(isset($_GET['delsubtopicsub_id'])){
                 <div class="card-header" style="padding:0px;">
                   <h3 class="card-title" style="padding-top:25px; margin-left:10px;">course</h3>
                   <div class="card-tools my-3" style="text-align:end;">
-                    <a class="btn btn-primary" href="subtopic_form.php" data-tt="tooltip" title=""
+                    <a class="btn btn-primary" href="sub_subtopic_form.php" data-tt="tooltip" title=""
                       data-original-title="Click here to Add project" style="margin-right:20px;">Add subtopic</a>
                   </div>
                 </div>
@@ -115,13 +111,12 @@ if(isset($_GET['delsubtopicsub_id'])){
                   <table id="example1" class="table table-bordered table-striped">
                   <thead>
                       <tr>
-                                    <th>course id</th>
+                                      <th> Sr No.</th>
                                       <th>Course Name</th>
-                                      <th>Maintopic Id</th>
                                       <th>Maintopic Name</th>
                                       <th>Subtopic Name</th>
                                       <th>content</th>
-                                    <th>Action</th>
+                                      <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -132,9 +127,7 @@ if(isset($_GET['delsubtopicsub_id'])){
                                   ?>
                                         <tr>
                                         <td><?php echo $count;?></td>
-                                        <td><?php echo $arr['course_id'];?></td>
                                         <td><?php echo $arr['course_name'];?></td>
-                                        <td><?php echo $arr['maintopic_id'];?></td>
                                         <td><?php echo $arr['maintopic_name'];?></td> 
                                         <td><?php echo $arr['subtopic_name'];?></td>
                                         <td>
@@ -156,7 +149,7 @@ if(isset($_GET['delsubtopicsub_id'])){
                                 ?><ul style="list-style-type:none;"><?php
                                 while($rowsubtopic=mysqli_fetch_array($resSubtopic)){
                                   ?>
-                                  <li style="text-indent:20px; line-height:8px;"><?=$maintopicCount.".".$subtopicCount." ".$rowsubtopic['subtopic_name']?></li>
+                                  <li style="text-indent:10px; line-height:10px;"><?=$maintopicCount.".".$subtopicCount." ".$rowsubtopic['subtopic_name']?></li>
                                   
                                     <?php
                                     $subsubtopicCount=1;
@@ -166,7 +159,7 @@ if(isset($_GET['delsubtopicsub_id'])){
                                       ?><ul style="list-style-type:none;"> <?php
                                       while($rowsubSubtopic=mysqli_fetch_array($resSubSubtopic)){
                                         ?>
-                                        <p><li style="text-indent:30px; line-height:8px;"><?=$maintopicCount.".".$subtopicCount.".".$subsubtopicCount." ".$rowsubSubtopic['subtopicsub_name'];?></li></p>                            
+                                        <p><li style="text-indent:10px; line-height:10px;"><?=$maintopicCount.".".$subtopicCount.".".$subsubtopicCount." ".$rowsubSubtopic['subtopicsub_name'];?></li></p>                            
                                       <?php
                                       $subsubtopicCount++;
                                     }
@@ -184,15 +177,15 @@ if(isset($_GET['delsubtopicsub_id'])){
                           ?>
                                   </td>
                                     <td>
-                       <button  type="button" class="btn btn-primary btn-rounded btn-icon sub_subtopicedit btn-sm" data-toggle="modal" data-id='<?php echo $arr['subtopicsub_id']; ?>'
+                       <button  type="button" class="btn btn-primary btn-rounded btn-icon sub_subtopicedit btn-sm" data-toggle="modal" data-id='<?php echo $arr['course_id']; ?>'
                         style="color: aliceblue"> <i class="fas fa-pen"></i> </button>
                                                                
-                        <a href="sub_subtopic.php?delsubtopicsub_id=<?php echo $arr['subtopicsub_id']; ?>"><button type="button" class="btn btn-danger btn-rounded btn-icon btn-sm"  style="color: aliceblue"> <i class="fas fa-trash"></i> </button></a> </td>         
+                        <a href="sub_subtopic.php?delid=<?php echo $arr['course_id']; ?>"><button type="button" class="btn btn-danger btn-rounded btn-icon btn-sm"  style="color: aliceblue"> <i class="fas fa-trash"></i> </button></a> </td>         
     </tr>     
     
                                                  
     <?php
-    } 
+    $count++; } 
     ?>
                     </tbody>
 
