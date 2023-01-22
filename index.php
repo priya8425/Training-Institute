@@ -176,8 +176,7 @@
           
           <div class="col-lg-4">
             <div class="categories">
-                
-                <div class=" main-button-red" style="margin-bottom:70px;">
+                <div class=" main-button-red" style="margin-bottom:20px;">
                   <a href="meetings.html">All Upcoming Meetings</a>
                 </div>
                 <h4>Meeting Catgories</h4>
@@ -210,8 +209,8 @@
                     <a href="meeting-details.html"><img src="admin/dist/img/<?php echo $arr['image'];?>" alt="New Lecturer Meeting" style="height:250px;"></a>
                   </div>
                   <div class="down-content">
-                    <a href="meeting-details.html"><h4>New Lecturers Meeting</h4></a>
-                    <p>Morbi in libero blandit lectus.</p>
+                    <a href="meeting-details.html"><h4><?php echo $arr['content'];?></h4></a>
+                    
                   </div>
                 </div>
               </div>
@@ -247,19 +246,20 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="item">
-                  <h3>APPLY FOR BACHELOR DEGREE</h3>
-                  <p>You are allowed to use this edu meeting CSS template for your school or university or business. You can feel free to modify or edit this layout.</p>
+                  <h3>Learn new skills to go ahead for your career</h3>
+                  <p>Whether you want to learn you’ve come to the right place. As a global destination for online learning, we connect people through knowledge.
+                  </p>
                   <div class="main-button-red">
-                    <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                    <a href="registration.php">Join Us Now!</a>
                 </div>
                 </div>
               </div>
               <div class="col-lg-12">
                 <div class="item">
-                  <h3>APPLY FOR BACHELOR DEGREE</h3>
-                  <p>You are not allowed to redistribute the template ZIP file on any other template website. Please contact us for more information.</p>
+                  <h3>Enroll For the Course</h3>
+                  <p>Follow a recommended learning plan, specifically designed to help you build your knowledge and accomplish your career goals.</p>
                   <div class="main-button-yellow">
-                    <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                    <a href="registration.php">Join Us Now!</a>
                 </div>
                 </div>
               </div>
@@ -269,56 +269,54 @@
             <div class="accordions is-first-expanded">
               <article class="accordion">
                   <div class="accordion-head">
-                      <span>About Edu Meeting HTML Template</span>
+                      <span>About Us</span>
                       <span class="icon">
                           <i class="icon fa fa-chevron-right"></i>
                       </span>
                   </div>
                   <div class="accordion-body">
                       <div class="content">
-                          <p>If you want to get the latest collection of HTML CSS templates for your websites, you may visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">Too CSS website</a>. If you need a working contact form script, please visit <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more info.</p>
+                          <p>One may feel that the journey of MTIS has just begun but the thought process and its roadmap was laid by the management team for a long time thus enabling the three’s E’s for a better career
+                          – Education, Experience and Employability, please visit <a href="about.php" target="_parent">our about page</a> for more info.</p>
                       </div>
                   </div>
               </article>
               <article class="accordion">
                   <div class="accordion-head">
-                      <span>HTML CSS Bootstrap Layout</span>
+                      <span>How MTIS is Helpful?</span>
                       <span class="icon">
                           <i class="icon fa fa-chevron-right"></i>
                       </span>
                   </div>
                   <div class="accordion-body">
                       <div class="content">
-                          <p>Etiam posuere metus orci, vel consectetur elit imperdiet eu. Cras ipsum magna, maximus at semper sit amet, eleifend eget neque. Nunc facilisis quam purus, sed vulputate augue interdum vitae. Aliquam a elit massa.<br><br>
-                          Nulla malesuada elit lacus, ac ultricies massa varius sed. Etiam eu metus eget nibh consequat aliquet. Proin fringilla, quam at euismod porttitor, odio odio tempus ligula, ut feugiat ex erat nec mauris. Donec viverra velit eget lectus sollicitudin tincidunt.</p>
+                          <p>Like other educational and training industry at MTIS you will be offered varieties programs but the instructors makes the difference and make MTIS stand out from others. We have a variety of skilled and trained trainers whose approach is different which you can see anywhere.<br> MTIS contributes a lot to the knowledge of its trainees and we try our level hard to contribute the best to increase our trainee’s ability so that they stand out from others and whatever they contribute to the corporate world automatically becomes productive. </p>
                       </div>
                   </div>
               </article>
               <article class="accordion">
                   <div class="accordion-head">
-                      <span>Please tell your friends</span>
+                      <span>About MTIS Creative</span>
                       <span class="icon">
                           <i class="icon fa fa-chevron-right"></i>
                       </span>
                   </div>
                   <div class="accordion-body">
                       <div class="content">
-                          <p>Ut vehicula mauris est, sed sodales justo rhoncus eu. Morbi porttitor quam velit, at ullamcorper justo suscipit sit amet. Quisque at suscipit mi, non efficitur velit.<br><br>
-                          Cras et tortor semper, placerat eros sit amet, porta est. Mauris porttitor sapien et quam volutpat luctus. Nullam sodales ipsum ac neque ultricies varius.</p>
+                          <p>Getting a job is as difficult as beating the crowd because being in the corporate world demands a lot from the applicant because of which the applicants are putting their best, which results in the increment of difficulty level. You can see each and every thing is connected but the solution of this problem is either spending years to reach to a desired position or come to MTIS. At MTIS we provide the entire necessary computer training which helps the newbies and also the experienced workers so that they can achieve better recognition in this competitive world.</p>
                       </div>
                   </div>
               </article>
               <article class="accordion last-accordion">
                   <div class="accordion-head">
-                      <span>Share this to your colleagues</span>
+                      <span>What types of services are offered by MTIS?</span>
                       <span class="icon">
                           <i class="icon fa fa-chevron-right"></i>
                       </span>
                   </div>
                   <div class="accordion-body">
                       <div class="content">
-                          <p>Maecenas suscipit enim libero, vel lobortis justo condimentum id. Interdum et malesuada fames ac ante ipsum primis in faucibus.<br><br>
-                          Sed eleifend metus sit amet magna tristique, posuere laoreet arcu semper. Nulla pellentesque ut tortor sit amet maximus. In eu libero ullamcorper, semper nisi quis, convallis nisi.</p>
+                          <p>MTIS provides the best available programs which helps in enhancing the technical skills which seems to be beneficial for all the applicants.</p>
                       </div>
                   </div>
               </article>
@@ -334,6 +332,7 @@
           <div class="col-lg-12">
             <div class="section-heading">
               <h2>Our Popular Courses</h2>
+              
             </div>
           </div>
           <div class="col-lg-12">
@@ -361,245 +360,7 @@
                 </div>
               </div>
                 <?php } }?>
-              <!-- <div class="item">
-                <img src="assets/images/course-02.jpg" alt="Course Two">
-                <div class="down-content">
-                  <h4>Curabitur molestie dignissim purus vel</h4>
-                  <div class="info">
-                    <div class="row">
-                      <div class="col-8">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                      <div class="col-4">
-                        <span>$180</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/course-03.jpg" alt="">
-                <div class="down-content">
-                  <h4>Nulla at ipsum a mauris egestas tempor</h4>
-                  <div class="info">
-                    <div class="row">
-                      <div class="col-8">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                      <div class="col-4">
-                        <span>$140</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/course-04.jpg" alt="">
-                <div class="down-content">
-                  <h4>Aenean molestie quis libero gravida</h4>
-                  <div class="info">
-                    <div class="row">
-                      <div class="col-8">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                      <div class="col-4">
-                        <span>$120</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/course-01.jpg" alt="">
-                <div class="down-content">
-                  <h4>Lorem ipsum dolor sit amet adipiscing elit</h4>
-                  <div class="info">
-                    <div class="row">
-                      <div class="col-8">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                      <div class="col-4">
-                        <span>$250</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/course-02.jpg" alt="">
-                <div class="down-content">
-                  <h4>TemplateMo is the best website for Free CSS</h4>
-                  <div class="info">
-                    <div class="row">
-                      <div class="col-8">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                      <div class="col-4">
-                        <span>$270</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/course-03.jpg" alt="">
-                <div class="down-content">
-                  <h4>Web Design Templates at your finger tips</h4>
-                  <div class="info">
-                    <div class="row">
-                      <div class="col-8">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                      <div class="col-4">
-                        <span>$340</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/course-04.jpg" alt="">
-                <div class="down-content">
-                  <h4>Please visit our website again</h4>
-                  <div class="info">
-                    <div class="row">
-                      <div class="col-8">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                      <div class="col-4">
-                        <span>$360</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/course-01.jpg" alt="">
-                <div class="down-content">
-                  <h4>Responsive HTML Templates for you</h4>
-                  <div class="info">
-                    <div class="row">
-                      <div class="col-8">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                      <div class="col-4">
-                        <span>$400</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/course-02.jpg" alt="">
-                <div class="down-content">
-                  <h4>Download Free CSS Layouts for your business</h4>
-                  <div class="info">
-                    <div class="row">
-                      <div class="col-8">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                      <div class="col-4">
-                        <span>$430</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/course-03.jpg" alt="">
-                <div class="down-content">
-                  <h4>Morbi in libero blandit lectus cursus</h4>
-                  <div class="info">
-                    <div class="row">
-                      <div class="col-8">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                      <div class="col-4">
-                        <span>$480</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/course-04.jpg" alt="">
-                <div class="down-content">
-                  <h4>Curabitur molestie dignissim purus</h4>
-                  <div class="info">
-                    <div class="row">
-                      <div class="col-8">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                      <div class="col-4">
-                        <span>$560</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
+              
             </div>
           </div>
         </div>
@@ -612,40 +373,26 @@
           <div class="col-lg-6">
             <div class="row">
               <div class="col-lg-12">
-                <h2>A Few Facts About Our University</h2>
+                <h2>A Few Facts About Our Institute</h2>
               </div>
+                <?php
+                  $sql=mysqli_query($conn,"Select * from institute");
+                  if(mysqli_num_rows($sql)>0){
+                  while($arr=mysqli_fetch_array($sql)){
+                ?>
               <div class="col-lg-6">
                 <div class="row">
                   <div class="col-12">
                     <div class="count-area-content percentage">
-                      <div class="count-digit">94</div>
-                      <div class="count-title">Succesed Students</div>
+                      <div class="count-digit"><?php echo $arr['no'];?></div>
+                      <div class="count-title"><?php echo $arr['heading'];?></div>
                     </div>
                   </div>
-                  <div class="col-12">
-                    <div class="count-area-content">
-                      <div class="count-digit">126</div>
-                      <div class="count-title">Current Teachers</div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="count-area-content new-students">
-                      <div class="count-digit">2345</div>
-                      <div class="count-title">New Students</div>
-                    </div>
-                  </div> 
-                  <div class="col-12">
-                    <div class="count-area-content">
-                      <div class="count-digit">32</div>
-                      <div class="count-title">Awards</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
+              <?php } } ?>
             </div>
           </div> 
           <div class="col-lg-6 align-self-center">

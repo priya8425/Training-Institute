@@ -150,6 +150,12 @@
                 <p>Add Meeting Link</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="background_image.php" class="nav-link">
+              <i class="nav-icon fab fa-accessible-icon"></i>
+                <p> Add Images of upcoming courses</p>
+              </a>
+            </li>
             <!-- <li class="nav-item">
               <a href="subtopic.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>

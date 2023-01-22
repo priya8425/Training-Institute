@@ -125,6 +125,7 @@ if(isset($_GET['delid'])){
                   <thead>
                       <tr>
                         <th>Service Name</th>
+                        <th>Service Content</th>
                         <th>Image</th>
                         <th>Action</th>
                       </tr>

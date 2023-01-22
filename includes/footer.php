@@ -42,9 +42,15 @@
     
       <p><a href="trainers.php">Testimonials</a></p>
       <p><a href="#">FAQ</a></p>
-      <p><a href="#">Campus Pictures</a></p>
-      <p><a href="#">Tuitions</a></p>
-   
+      <!-- <p><a href="#">Campus Pictures</a></p>
+      <p><a href="#">Tuitions</a></p> -->
+      <br>
+              <div style="display:flex;">
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#"><i class="fa fa-facebook"></i></a>&emsp;
+                <a href="#"><i class="fa fa-whatsapp"></i></a>&emsp;
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </div>
+           
   </div>
 </div>
 

@@ -106,7 +106,7 @@ include('includes/configure.php');
                                 </ul>
                             </li>
                             <li><a href="gallery.php">Gallery</a></li> 
-                            <li><a href="contact.php" class="active">Contact Us</a></li> 
+                            <li><a href="contact.php" class="">Contact Us</a></li> 
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -142,14 +142,14 @@ include('includes/configure.php');
                             <div class="col-md-6 mb-3 pb-2">
                               <div class="form-outline">
                                 <label class="form-label" for="full_name">Full Name</label>
-                                  <input type="text"  class="form-control form-control-lg" name="full_name" id="full_name" maxlength="85" pattern="^(?:((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-.\s])){1,}(['’,\-\.]){0,1}){2,}(([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-. ]))*(([ ]+){0,1}(((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-\.\s])){1,})(['’\-,\.]){0,1}){2,}((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-\.\s])){2,})?)*)$" title="Please enter your FULL name." required/>
+                                  <input type="text"  class="form-control form-control-md" name="full_name" id="full_name" maxlength="85" pattern="^(?:((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-.\s])){1,}(['’,\-\.]){0,1}){2,}(([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-. ]))*(([ ]+){0,1}(((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-\.\s])){1,})(['’\-,\.]){0,1}){2,}((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-\.\s])){2,})?)*)$" title="Please enter your FULL name." required/>
                                   
                               </div>
                             </div>
                             <div class="col-md-6  mb-3 pb-2">
                               <div class="form-outline">
                                 <label class="form-label" for="email">Email</label>
-                                <input type="email" id="email" class="form-control form-control-lg" title="Please enter your Email." required/>
+                                <input type="email" id="email" class="form-control form-control-md" pattern="[^ @]*@[^ @]*" title="Please enter your Email." required/>
                                 <h2 id="result"></h2>
                               </div>
                             </div>
@@ -159,7 +159,7 @@ include('includes/configure.php');
                             <div class="col-md-6 mb-3 pb-2">
                               <div class="form-outline">
                                 <label class="form-label" for="phoneNumber">Phone Number</label>
-                                <input type="tel"  id="phoneNo" name="phone" class="form-control form-control-lg" maxlength="10" required/>
+                                <input type="tel"  id="phoneNo" name="phone" class="form-control form-control-md" maxlength="10" required/>
                                 
                               </div>
                               <div id="result"></div>
@@ -187,19 +187,39 @@ include('includes/configure.php');
                           <div class="row">
                             <div class="col-md-6 mb-3 pb-2">
                               <div class="form-outline">
-                                <label class="form-label" for="password">Password</label>
-                                <input type="password" id="txtPassword" class="form-control form-control-lg" required/>
+                                <label class="form-label" for="">State </label>
+                                <input type="text" id="" class="form-control form-control-md" required/>
                                 
                               </div>
                             </div>
                             <div class="col-md-6 mb-3 pb-2">
                               <div class="form-outline">
-                                <label class="form-label" for="pass">Confirm Password</label>
-                                <input type="password" id="txtConfirmPassword" class="form-control form-control-lg" required/>
+                                <label class="form-label" for="pass">Mode Of Training</label>
+                                <select class="form-control">
+                                  <option>Select</option>
+                                  <option>Online</option>
+                                  <option>Classroom</option>
+                                  <option>Weekend</option>
+                                  <option>Internship</option>
+                                </select>
                               </div>
                             </div>
                           </div>
 
+                          <div class="row">
+                            <div class="col-md-6 mb-3 pb-2">
+                              <div class="form-outline">
+                                <label class="form-label" for="pass">Course</label>
+                                <select class="form-control">
+                                  <option>Select</option>
+                                  <option>Online</option>
+                                  <option>Classroom</option>
+                                  <option>Weekend</option>
+                                  <option>Internship</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
                           <div class="row">
                             <div class="col-md-12 ">
                                 <div class="form-check d-flex justify-content-left mb-5">
@@ -212,11 +232,11 @@ include('includes/configure.php');
                           </div>
 
                           <center><button type="button" class="btn btn-primary btn-block mb-4 ">Submit</button></center>
-                            <div class="form-check d-flex justify-content-center ">
+                            <!-- <div class="form-check d-flex justify-content-center ">
                                   <label for="form2Example3">
                                     Already have an account ? <a href="login.php">Sing In </a>
                                   </label>
-                            </div>
+                            </div> -->
                           
                         </form>
                     </div>

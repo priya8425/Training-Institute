@@ -129,80 +129,60 @@ https://templatemo.com/tm-569-edu-meeting
       <div class="row">
         <div class="col-lg-12">
           <!-- <h6>Here are our upcoming meetings</h6> -->
-          <h2>Contact Us</h2>
+          <h2>About Us</h2>
         </div>
       </div>
     </div>
   </section>
-        <section class="contact-us" id="contact">
+          <section class="contact-us" id="contact">
             <div class="container">
-              <div class="row">
-                <div class="col-lg-9 align-self-center">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <form id="contact" method="post"  action="mailer.php">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <h2>Let's get in touch</h2>
-                          </div>
-                          <div class="col-lg-4">
-                            <fieldset>
-                              <input name="name" type="text" id="name" placeholder="YOURNAME...*" required="">
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-4">
-                            <fieldset>
-                            <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required="">
-                          </fieldset>
-                          </div>
-                          <div class="col-lg-12">
-                            <fieldset>
-                              <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..." required=""></textarea>
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-12">
-                            <fieldset>
-                              <button type="submit" id="form-submit"name="submit" class="button">SEND MESSAGE NOW</button>
-                            </fieldset>
-                          </div>
+                <div class="row">
+                        <div class="col-lg-5">
+                            <img src="assets/images/bg1.jpg">
                         </div>
-                      </form>
-                    </div>
-                  </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-6 align-self-center">
+                            <p style="color:white;">One may feel that the journey of MTIS has just begun but the thought process and its roadmap was laid by the management team for a long time thus enabling the three’s E’s for a better career
+                                – Education, Experience and Employability.<br>Not only the fresher but also the corporates who are not able to deal with the rising technology and software are also helped here. We try our level best to deliver our services to every corner of the world by the help of customized education.<br> Our motto is to deliver the best services to you and that is why we have taken the customized approach because we do not want you to compromise with your education,</p><br><br>
+                            
+                        </div>
                 </div>
-                <div class="col-lg-3">
-                  <div class="right-info">
-                    <ul>
-                      <li>
-                        <h6>Phone Number</h6>
-                        <span>9930067580/9029941077</span>
-                      </li>
-                      <li>
-                        <h6>Email Address</h6>
-                        <span>marckstech@gmail.com
-								</li></span>
-                      </li>
-                      <li>
-                        <h6>Street Address</h6>
-                        <span>T-09, 3rd Floor, Haware Centurion Mall, Sector-19A, Seawoods, NaviMumbai</span>
-                      </li>
+                <br><br>
+                <div class="row">
+                        
+                            <!-- <div class="right-info" style="color:white;">
+                            MTIS provides the best available programs<br> which helps in enhancing the technical skills<br> which seems to be beneficial for all the applicants.
+                            </div> -->
+                            <!-- <div class="col-lg-5 align-self-center">
+                                <p style="color:white;">One may feel that the journey of MTIS has just begun but the thought process and its roadmap was laid by the management team for a long time thus enabling the three’s E’s for a better career
+                                    – Education, Experience and Employability.<br>Not only the fresher but also the corporates who are not able to deal with the rising technology and software are also helped here. We try our level best to deliver our services to every corner of the world by the help of customized education.<br> Our motto is to deliver the best services to you and that is why we have taken the customized approach because we do not want you to compromise with your education,</p><br><br>
+                            
+                            </div>
                       
-                    </ul>
-                  </div>
+                        <div class="col-lg-1"></div>
+                        <br> -->
+                        <div class="col-lg-6">
+                            
+                            <div class="row">
+                                <p style="color:white;"><b>Software Development:</b> We provide the best and latest IT software training which helps all the fresher and the corporates to understand well and give them the knowledge to go hand in hand with the latest technologies. This does not only helps the companies but also increases the self-level to deal with all the necessary software.</p><br><br>
+                                <p style="color:white;"><b>Instructor led campus:</b> MTIS helps all the new instructors to get the best exposure to show their talent in right way.</p><br><br>
+                                <p style="color:white;"><b>Workshops and Placement Service:</b> At MTIS, workshops are held to increase the understanding level because theoretical values are always not enough and workshops helps in getting the practical knowledge which results in better understanding. As everything leads to the placement because if the institute does not provide placement services then it is ultimately bad for the applicants but we provide the best placement services and for that we give our best to give you the best.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-5" >
+                            <img src="assets/images/bg2.jpg">
+                        </div>
                 </div>
-              </div>
+                <!-- -->
+              
             </div>
           </section>
-          <section class="contact-us">
+         <section class="contact-us">
             <div class="container">
               <div class="row">
                 <div class="col">
-                  <div id="google_map">
-                    <div class="map_container">
-                      <div id="map"  style="height:400px;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.8903646068625!2d73.01989741440482!3d19.024552158532543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3beaf802169%3A0x507569bece5f9141!2sMARCKS+Training+%26+IT+Services!5e0!3m2!1sen!2sin!4v1554876380519!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-                    </div>
-                  </div>
-                </div>
+                  
               </div>
             </div>
             <?php 
@@ -210,7 +190,7 @@ https://templatemo.com/tm-569-edu-meeting
             ?>
          
           </section>
-        
+         
    
 
 
@@ -275,5 +255,7 @@ https://templatemo.com/tm-569-edu-meeting
     </script>
 </body>
 
+
+  </body>
 
 </html>

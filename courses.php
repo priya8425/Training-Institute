@@ -166,7 +166,8 @@
                 <div class="row">
                     <div class="col-lg-8 ">
                     
-                        <h3 style="color:white;">Learn Software Courses from the Expert Trainers.</h3>
+                        <h3 style="color:white;">Learn Software Courses from the Expert Trainers.</h3><br>
+                        <h6 style="color:white;">Stuck on what course to study? We offer a wide range of training courses.<br> Active, student-centred learning and high pass rates make us a provider of choice.</h6><br>
                         <input class="form-control" id="myInput" type="text" placeholder="Search.." style="width:120px; float:right;">
                             <br>
                             <table class="table table-bordered table-striped" style="margin-top:20px;">

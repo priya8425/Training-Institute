@@ -6,12 +6,12 @@ include("_includes/config.php");
 // } 
     if(isset($_POST['submit']))
     {
-     
-        $video = $_FILES['video']['name'];
-        $tmp_name = $_FILES['video']['tmp_name'];
-        $path = "dist/img/".$video;
+        $content = $_POST['content'];
+        $image = $_FILES['image']['name'];
+        $tmp_name = $_FILES['image']['tmp_name'];
+        $path = "dist/img/".$image;
         move_uploaded_file($tmp_name,$path);
-        $query = "INSERT INTO `bg_image`(`video`) VALUES ('$image')";
+        $query = "INSERT INTO `bg_image`(`image`,`content`) VALUES ('$image','$content')";
         if (mysqli_query($conn, $query)){
           echo "<script> alert ('New record has been added successfully !');window.location='background_image.php'</script>";
        } else {
@@ -69,12 +69,12 @@ include("_includes/config.php");
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">    
-          <h1>Background Form</h1>
+          <h1>Upcoming Course Form</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Background Form</li>
+              <li class="breadcrumb-item active">Upcoming Course Form</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -88,7 +88,7 @@ include("_includes/config.php");
           <!-- SELECT2 EXAMPLE -->
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">Background Form</h3>
+              <h3 class="card-title">Upcoming Course Form</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -100,12 +100,15 @@ include("_includes/config.php");
 
                     <div class="form-group">
                       <label>Image</label><span style="color:red;"></span>
-                      <input type="file" name="video" class="form-control">
+                      <input type="file" name="image" class="form-control">
                     </div>
-                    <!-- /.form-group -->
+                  </div>
+                  <div class="col-md-6">
 
-
-                    <!-- /.form-group -->
+                    <div class="form-group">
+                      <label>Content</label><span style="color:red;"></span>
+                      <input type="text" name="content" class="form-control">
+                    </div>
                   </div>
                 </div>
                 <!-- /.row -->

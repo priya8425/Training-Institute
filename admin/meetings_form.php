@@ -82,7 +82,7 @@ include("_includes/config.php");
     <section class="content">
         <div class="container-fluid">
           <!-- SELECT2 EXAMPLE -->
-          <div class="card card-default col-md-6">
+          <div class="card card-default col-md-12">
             <div class="card-header">
               <h3 class="card-title">Meetings Form</h3>
             </div>
@@ -90,16 +90,20 @@ include("_includes/config.php");
             <div class="card-body">
               <form method="post" enctype="multipart/form-data">
                 <div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-6">
                     <div class="form-group">
                       <label>Link</label>
                       <input type="text" class="form-control" name="link">
                     </div>
                   </div>
+                  <div class="col-md-6">
+                  <div class="form-group">
+                  <button type="submit" name="submit" class="btn btn-primary" >Submit</button>
+                  </div>
+                  </div>
                 </div>
                   <!-- /.col -->
                 <!-- /.form-group -->
-                <button type="submit" name="submit" class="btn btn-primary" >Submit</button>
             </div>
             <!-- /.col -->
           </div>

@@ -180,10 +180,10 @@ https://templatemo.com/tm-569-edu-meeting
                             <br>
                             <p style="color:white;">Although our software courses are designed to be easy to learn, our students often tell us that the training they take advantage of enhances their experience using our software training delivery and their overall efficiency.</p>
 
-                            <br>
-                            <h3>What are the MITS Reviews our Students are saying about our Courses and the advantages of our Software Training</h3>
+                            <br><br>
+                            <h4>What are the MITS Reviews our Students are saying about our Courses and the advantages of our Software Training</h4>
                         <br>
-                        <p style="color:white;"><b>I am doing complete Java package in Naresh IT. I am very happy that NareshIT is providing all the courses of java (Core Java, Adv.Java, Hibernate, Struts, Spring, EJB, XML and Web Services) with HTML and Oracle as free at 4500/- only. I am getting good technical stuff with less price. I can confidently say that there is no Institute which will give this many courses with less amount with 24 hours Lab facility also. Thank you Naresh IT for providing all support towards Student.</b></p>
+                        <p style="color:white;"><b>I am doing complete Java package in MTIS. I am very happy that MTIS is providing all the courses of java (Core Java, Adv.Java, Hibernate, Struts, Spring, EJB, XML and Web Services) with HTML and Oracle as free at 4500/- only. I am getting good technical stuff with less price. I can confidently say that there is no Institute which will give this many courses with less amount with 24 hours Lab facility also. Thank you MTIS for providing all support towards Student.</b></p>
                                                     
                     </div>
                     <div class="col-lg-4">

@@ -169,20 +169,25 @@ https://templatemo.com/tm-569-edu-meeting
                 <div class="row">
                     <div class="col-lg-8 " style="color:white;">
                     
-                                <h3 style="color:white;">Vision and Mission</h3>
+                                <h3 style="color:white;">VISION
+                                  AND
+                                  MISSION</h3>
                                 <hr>
-                                    This is a page description
+                                 Education, Experience and Employability
                                 <hr>
                                 
                                 
                                 <br>
-                                <h5 style="color:white; font-size:15px;">To enrich the knowledge & skill sets of young software       engineers by providing value added training in the areas of Software Development & Testing.
-
-                                  To serve the industries by providing trained human resources in the above areas.
-
-                                  To provide quality Software Training & Consulting Services in the areas of J2EE, .NET, ERP, Database Administration, Testing, Content Management with Live Projects.</h5>
+                                <p style="color:white; font-size:15px;">We at MTIS, provide the guidance by qualified professionals, after assessing the intelligence, interest and personality of an individual to identify the careers in which the individual will succeed and counsel him/her accordingly.<br> It helps students to select courses based on their level of intelligence, interests, personality and to prepare for appropriate careers. Our primary purpose is to guide you how to explore and investigate your inner potential and overcome your weaknesses.<br> Interest inventories and career tests will not tell you what you could or should do. They will, however, help you organize your thoughts and ideas about the career path that you would like to choose for yourself.</p>
+                               
                                 <br>
                                 <br>
+                                <p style="color:white; font-size:15px;">To enrich the knowledge & skill sets of young software       engineers by providing value added training in the areas of Software Development & Testing.</p><br>
+
+                                  <p style="color:white; font-size:15px;">To serve the industries by providing trained human resources in the above areas.
+                                  </p><br>
+
+                                  <p style="color:white; font-size:15px;">To provide quality Software Training & Consulting Services in the areas of Java Full Stack, .NET Full Stack, PYthon Full Stack , Database Administration, Tableau, SAP FICO, SAP HANNA, SAP ABAP, Content Management with Live Projects.</p>
                                 
                     </div>
                     <div class="col-lg-4">

@@ -7,24 +7,22 @@ include("_includes/config.php");
 
 if(isset($_GET['delid'])){
   $id=mysqli_real_escape_string($conn,$_GET['delid']);
-  $sql=mysqli_query($conn,"delete from bg_image where id='$id'");
+  $sql=mysqli_query($conn,"delete from institute where id='$id'");
   if($sql=1){
-      header("location:background_image.php");
+      header("location:institute.php");
   }
   }
 
-  if(isset($_POST['backgroundedit1'])){
+  if(isset($_POST['instituteedit1'])){
     $id=$_POST['id'];
-    $image=$_FILES['image']['name'];
-  $dnk=$_FILES['image']['tmp_name'];
-    $loc="dist/img/".$image;
-    move_uploaded_file($dnk,$loc);
-    $sql="UPDATE `bg_image` SET `image`='$image' WHERE id='$id'";
+    $no=$_POST['no'];
+    $heading=$_POST['heading'];
+    $sql="UPDATE `institute` SET `no`='$no',`heading`='$heading' WHERE id='$id'";
     if (mysqli_query($conn, $sql)){
       // header("location:new_project.php");
       echo "<script>alert('Successfully Updated');</script>";
    } else {
-      echo "<script> alert ('connection failed !');window.location.href='background_image.php'</script>";
+      echo "<script> alert ('connection failed !');window.location.href='institute.php'</script>";
    }
   }
   
@@ -117,29 +115,29 @@ if(isset($_GET['delid'])){
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th>Image</th>
-                        <th>Content</th>
+                        <th>NO</th>
+                        <th>Heading</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       <?php     
-                      $sql=mysqli_query($conn,"select * from bg_image");
+                      $sql=mysqli_query($conn,"select * from institute");
                       while($arr=mysqli_fetch_array($sql)){
                       ?>
                       <tr>
-                        <td>
-                        <img src="dist/img/<?php echo $arr['image'];?>" style="height:80px; width:70px;"> 
+                      <td>
+                          <?php echo $arr['no'];?>
                         </td>
                         <td>
-                          <?php echo $arr['content'];?>
+                          <?php echo $arr['heading'];?>
                         </td>
                         <td>
                        
-                       <button  type="button" class="btn btn-primary btn-rounded btn-icon backgroundedit btn-sm" data-toggle="modal" data-id='<?php echo $arr['id']; ?>'
+                       <button  type="button" class="btn btn-primary btn-rounded btn-icon instituteedit btn-sm" data-toggle="modal" data-id='<?php echo $arr['id']; ?>'
                         style="color: aliceblue"> <i class="fas fa-pen"></i> </button>
                                                                
-                        <a href="background_image.php?delid=<?php echo $arr['id']; ?>"><button type="button" class="btn btn-danger btn-rounded btn-icon btn-sm"  style="color: aliceblue"> <i class="fas fa-trash"></i> </button></a> 
+                        <a href="institute.php?delid=<?php echo $arr['id']; ?>"><button type="button" class="btn btn-danger btn-rounded btn-icon btn-sm"  style="color: aliceblue"> <i class="fas fa-trash"></i> </button></a> 
                        
                         <!-- <a href="manual-attendance.php?delid=<?php echo $arr['id']; ?>"><button type="button" class="btn btn-primary btn-rounded btn-icon"  style="color: aliceblue"> <i class="fas fa-eye"></i> </button></a> -->
                         </td> 
@@ -154,25 +152,25 @@ if(isset($_GET['delid'])){
                   </table>
 
                   <div class="modal fade closemaual" id="dnkModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-      </div>
-      <form method="post" enctype="multipart/form-data">
-      <div class="modal-body body4">
-      </div>
-    <div class="modal-footer">
-    <button type="button" class="btn-close btn btn-secondary" data-dismiss="modal">Close</button>
-      <button type="submit" class="btn btn-primary" name="backgroundedit1">Save changes</button>
-    </div>
-  </form>
-  </div>
-  </div>
-</div>
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                    </button>
+                        </div>
+                        <form method="post" enctype="multipart/form-data">
+                        <div class="modal-body body4">
+                        </div>
+                      <div class="modal-footer">
+                      <button type="button" class="btn-close btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" name="instituteedit1">Save changes</button>
+                      </div>
+                    </form>
+                    </div>
+                    </div>
+                  </div>
                 </div>
                 <!-- /.card-body -->
               </div>
@@ -239,13 +237,13 @@ include("_includes/footer.php");
   </script>
     <script>
           $(document).ready(function(){
-          $('.backgroundedit').click(function(){
-            let dnk4 = $(this).data('id');
+          $('.instituteedit').click(function(){
+            let dnkk4 = $(this).data('id');
 
             $.ajax({
             url: 'check.php',
             type: 'post',
-            data: {dnk4: dnk4},
+            data: {dnkk4: dnkk4},
             success: function(response4){ 
               $('.body4').html(response4);
               $('#dnkModal3').modal('show'); 
@@ -255,7 +253,7 @@ include("_includes/footer.php");
 
 
           });
-          </script>
+    </script>
 </body>
 
 </html>

@@ -385,7 +385,7 @@ if(isset($_POST['dnk4'])){
  <div class="col-md-12">
 <div class="form-group">
 <label for="clock_in">
-Image   <span class="text-danger">*</span>
+Image:<span class="text-danger">*</span>
 </label>
 <div class="input-group">
 <input type="hidden" name="id" value="'.$row['id'].'">
@@ -395,6 +395,46 @@ Image   <span class="text-danger">*</span>
 </div>
 </div>
  
+</div>
+';
+}
+
+
+?>
+<?php
+if(isset($_POST['dnkk4'])){
+  $query=mysqli_query($conn,"select * from bg_image where id='".$_POST['dnkk4']."'");
+  $row=mysqli_fetch_array($query);
+  echo ' 
+
+  <div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+      <label for="date">
+     No: <span class="text-danger">*</span>
+      </label>
+      <div class="input-group">
+      <input type="hidden" name="id" value="'.$row['id'].'">
+         
+        <input class="form-control" placeholder="name" name="no" type="text" value="'.$row['no'].'" data-dtp="dtp_dl6pL">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+      <label for="date">
+     Heading: <span class="text-danger">*</span>
+      </label>
+      <div class="input-group">
+      
+        <input class="form-control" placeholder="name" name="heading" type="text" value="'.$row['heading'].'" data-       dtp="dtp_dl6pL">
+        
+      </div>
+    </div>
+  </div>
 </div>
 ';
 }

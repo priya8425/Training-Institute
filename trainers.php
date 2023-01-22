@@ -170,7 +170,7 @@ https://templatemo.com/tm-569-edu-meeting
                 <br>
                 <h3 style="color:white;">About Software Trainers Profile</h3>
                 <br>    
-                <h5 style="color:white; font-size:13px;">The quality and also usefulness connected with any kind of exercise program depends upon the actual Software Trainers.  MTIS Software Trainers are professionals, that are experienced and have real-world connection with the approval advancement. The actual interactive session carried out throughout the Course assists student for you to clear the style and also find out more rapidly.</h5>
+                <h5 style="color:white; font-size:13px;">The quality and also usefulness connected with any kind of exercise program depends upon the actual Software Trainers.  MTIS Software Trainers are professionals, that are experienced and have real-world connection with the approval advancement. The actual interactive session carried out throughout the Course assists student for you to clear the style and also find out more rapidly.</h5><br>
                 <h5 style="color:white; font-size:13px;">Having rich practical knowledge with technologies asking, providing alternatives for sophisticated and also varied difficulties for you to business, all our own software trainers are knowledgeable and also conversant regarding the newest scientific progress within their field of expertise, that eventually enables them to share technologies beyond study course articles and also guide the actual students with entire understanding of purposes.</h5>
                 <br>
                 <br>

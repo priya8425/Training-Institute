@@ -166,7 +166,9 @@ https://templatemo.com/tm-569-edu-meeting
                
                 <div class="row">
                     <div class="col-lg-8 ">
-                    
+                        <p style="color:white;">A renowned name in the field of IT training, a brand used as a synonym for expanding the horizons in offering the best and the latest. As an organization that has committed itself in assisting the students in being placed into their dream organizations, We are now assisting our students in being placed into their dream organizations.</p>
+                        <br>
+                        <br>
                         <h3 style="color:white;">Learn Software Courses from the Expert Trainers.</h3>
                         <input class="form-control" id="myInput" type="text" placeholder="Search.." style="width:120px; float:right;">
                             <br>
@@ -358,7 +360,16 @@ https://templatemo.com/tm-569-edu-meeting
           checkSection();
         });
     </script>
-    
+    <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+    </script>
 </body>
 
 
